@@ -182,8 +182,8 @@ export default function Home() {
       {/* Main Container for all content */}
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="bg-white pt-4 pb-2">
-          <header className="bg-white rounded-2xl mx-2 xl:mx-0 px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 relative z-40">
+        <div className="bg-white pt-4 pb-1 sm:pb-2">
+          <header className="bg-white rounded-2xl mx-2 lg:mx-0 px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 relative z-40">
             {/* Logo */}
             <div className="flex items-center">
               <Image
@@ -261,7 +261,7 @@ export default function Home() {
           className="relative px-4 py-8 md:py-16 z-10"
         >
           {/* Background Image - Behind everything in hero section */}
-          <div className="absolute inset-0 z-0 hidden md:block w-full">
+          <div className="absolute inset-0 z-0 w-full">
             <Image
               src="/bgbanner.png"
               alt="Hero Background"
@@ -437,7 +437,7 @@ export default function Home() {
           variants={perspectiveFlip}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="px-4 mt-8 lg:mt-0 py-0 mb-20"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
@@ -466,11 +466,7 @@ export default function Home() {
         </motion.section>
 
         {/* Fourth Section - Celebrate, No Matter the Distance */}
-        <motion.section
-          variants={scaleRotate}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
+        <div
           className="relative min-h-screen flex items-center justify-center px-4 py-8"
         >
         {/* Background Image */}
@@ -649,7 +645,7 @@ export default function Home() {
               Near or far, you can still make someone smile or lift your own mood.
             </p>
           </div>
-        </motion.section>
+        </div>
 
         {/* Fifth Section - Send real product stickers instantly */}
         <motion.section
@@ -743,7 +739,11 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="px-4 py-0 overflow-hidden"
+          className="px-4 py-0 overflow-hidden relative backdrop-blur-sm"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
+          }}
         >
         <div className="flex">
           <div className="animate-scroll whitespace-nowrap text-4xl md:text-5xl font-bold text-gray-700">
@@ -1271,7 +1271,7 @@ export default function Home() {
         <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
         {/* Footer */}
-        <footer className="px-4 py-16 mt-20" style={{ backgroundColor: '#88C1FD' }}>
+        <footer className="px-4 py-16 mt-20 bg-[#88C1FD] rounded-t-2xl">
           {/* Stay Connected Section */}
           <div className="bg-white rounded-2xl p-8 mb-8 text-center md:text-left">
             <h2 className="text-2xl font-bold text-black mb-6">Stay Connected</h2>
