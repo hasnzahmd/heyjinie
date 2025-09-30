@@ -179,204 +179,204 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <div className="bg-white pt-4 pb-2">
-        <header className="bg-white rounded-2xl mx-2 lg:mx-auto px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 max-w-6xl relative z-40">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Image
-              src="/logo-1.png"
-              alt="HeyJinie Logo"
-              width={150}
-              height={70}
-              className="w-[120px] h-auto md:w-[150px]"
-            />
-          </div>
+      {/* Main Container for all content */}
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="bg-white pt-4 pb-2">
+          <header className="bg-white rounded-2xl mx-2 xl:mx-0 px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 relative z-40">
+            {/* Logo */}
+            <div className="flex items-center">
+              <Image
+                src="/logo-1.png"
+                alt="HeyJinie Logo"
+                width={150}
+                height={70}
+                className="w-[120px] h-auto md:w-[150px]"
+              />
+            </div>
 
-          {/* Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            <a href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">HeyJinie Business</a>
-            <button onClick={() => setIsContactOpen(true)} className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Contact us</button>
-            <a href="https://heyjinie.com/blog.html" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Blog</a>
-          </nav>
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center gap-8">
+              <a href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">HeyJinie Business</a>
+              <button onClick={() => setIsContactOpen(true)} className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Contact us</button>
+              <a href="https://heyjinie.com/blog.html" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Blog</a>
+            </nav>
 
-          {/* App Download Icons */}
-          <div className="hidden lg:flex items-center gap-3">
-            <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-              <FaApple className="text-black w-5 h-5" />
-              <span className="label text-gray-700 text-sm font-medium">App Store</span>
-            </a>
-            <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-              <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
-              <span className="label text-gray-700 text-sm font-medium">Google Play</span>
-            </a>
-          </div>
+            {/* App Download Icons */}
+            <div className="hidden lg:flex items-center gap-3">
+              <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
+                <FaApple className="text-black w-5 h-5" />
+                <span className="label text-gray-700 text-sm font-medium">App Store</span>
+              </a>
+              <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
+                <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
+                <span className="label text-gray-700 text-sm font-medium">Google Play</span>
+              </a>
+            </div>
 
-          {/* Mobile Menu Toggle + Start Gifting */}
-          <div className="flex items-center gap-2">
-            <button
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <FaTimes /> : <FaBars />}
-            </button>
-            <a href="https://webapp.heyjinie.com/auth" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-              <FaGift className="text-gray-700" />
-              <span className="label text-gray-700 text-sm font-medium">Start Gifting</span>
-            </a>
-          </div>
+            {/* Mobile Menu Toggle + Start Gifting */}
+            <div className="flex items-center gap-2">
+              <button
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+              </button>
+              <a href="https://webapp.heyjinie.com/auth" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
+                <FaGift className="text-gray-700" />
+                <span className="label text-gray-700 text-sm font-medium">Start Gifting</span>
+              </a>
+            </div>
 
-          {/* Mobile Dropdown Menu */}
-          {isMenuOpen && (
-            <div className="absolute md:hidden top-full left-4 right-4 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50">
-              <div className="flex flex-col gap-3">
-                <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-700 hover:text-gray-900 transition-colors">HeyJinie Business</a>
-                <button onClick={() => { setIsMenuOpen(false); setIsContactOpen(true); }} className="text-gray-700 hover:text-gray-900 transition-colors text-left">Contact us</button>
-                <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/blog.html" className="text-gray-700 hover:text-gray-900 transition-colors">Blog</a>
-                <div className="h-px bg-gray-200 my-2" />
-                <div className="flex items-center gap-3">
-                  <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
-                    <FaApple className="text-black w-5 h-5" />
-                    <span className="label text-gray-700 text-sm font-medium">App Store</span>
-                  </a>
-                  <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
-                    <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
-                    <span className="label text-gray-700 text-sm font-medium">Google Play</span>
-                  </a>
+            {/* Mobile Dropdown Menu */}
+            {isMenuOpen && (
+              <div className="absolute md:hidden top-full left-4 right-4 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50">
+                <div className="flex flex-col gap-3">
+                  <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-700 hover:text-gray-900 transition-colors">HeyJinie Business</a>
+                  <button onClick={() => { setIsMenuOpen(false); setIsContactOpen(true); }} className="text-gray-700 hover:text-gray-900 transition-colors text-left">Contact us</button>
+                  <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/blog.html" className="text-gray-700 hover:text-gray-900 transition-colors">Blog</a>
+                  <div className="h-px bg-gray-200 my-2" />
+                  <div className="flex items-center gap-3">
+                    <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
+                      <FaApple className="text-black w-5 h-5" />
+                      <span className="label text-gray-700 text-sm font-medium">App Store</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
+                      <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
+                      <span className="label text-gray-700 text-sm font-medium">Google Play</span>
+                    </a>
+                  </div>
                 </div>
               </div>
+            )}
+          </header>
+        </div>
+
+        {/* Hero Section */}
+        <motion.main
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          className="relative px-4 py-8 md:py-16 z-10"
+        >
+          {/* Background Image - Behind everything in hero section */}
+          <div className="absolute inset-0 z-0 hidden md:block w-full">
+            <Image
+              src="/bgbanner.png"
+              alt="Hero Background"
+              fill
+              className="object-cover rounded-2xl"
+            />
+          </div>
+
+          {/* Floating Gift Items */}
+          <div className="absolute inset-0 pointer-events-none z-30">
+            {/* Top left */}
+            <div className="absolute top-48 left-4 lg:top-16 lg:left-1/8 transform rotate-12 animate-float">
+              <Image
+                src="/Blue.png"
+                alt="Blue Gift Box"
+                width={200}
+                height={200}
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+              />
             </div>
-          )}
-        </header>
-      </div>
 
-      {/* Hero Section */}
-      <motion.main
-        initial={{ opacity: 0, y: 15 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        className="relative px-4 py-8 md:py-16 z-10"
-      >
-        {/* Background Image - Behind everything in hero section */}
-        <div className="absolute inset-0 z-0 hidden md:block">
-          <Image
-            src="/bgbanner.png"
-            alt="Hero Background"
-            fill
-            className="object-cover"
-          />
-        </div>
+            {/* Top right */}
+            <div className="absolute top-48 right-4 lg:top-16 lg:right-1/8 transform -rotate-12 animate-float2">
+              <Image
+                src="/Green.png"
+                alt="Green Gift Box"
+                width={200}
+                height={200}
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+              />
+            </div>
 
-        {/* Floating Gift Items */}
-        <div className="absolute inset-0 pointer-events-none z-30">
-          {/* Top left */}
-          <div className="absolute top-48 left-4 lg:top-16 lg:left-1/8 transform rotate-12 animate-float">
+            {/* Middle right */}
+            <div className="absolute top-108 right-6 lg:top-128 lg:right-1/4 transform rotate-6 animate-float3">
+              <Image
+                src="/Sambas.png"
+                alt="Sneaker"
+                width={180}
+                height={100}
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+              />
+            </div>
+
+            {/* Bottom left */}
+            <div className="absolute top-108 left-6 lg:top-128 lg:left-1/4 transform -rotate-8 animate-float">
+              <Image
+                src="/Headphones.png"
+                alt="Headphones"
+                width={140}
+                height={140}
+                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+              />
+            </div>
+          </div>
+
+          {/* Main Content */}
+          <div className="relative z-10 text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6 leading-tight">
+              Effortless Shopping,<br />
+              Endless Possibilities...
+            </h1>
+
+            <p className="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto">
+              With Heyjinie, you can send real, fun gifts from your chat anytime, anywhere.
+            </p>
+
+            {/* App Download Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+              <motion.a
+                whileHover={{ y: -2, scale: 1.02 }}
+                whileTap={{ y: 0, scale: 0.98 }}
+                transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                href="https://apps.apple.com/us/app/heyjinie"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
+              >
+                <FaApple className="text-black w-5 h-5" />
+                <span className="label text-gray-700 font-medium">App Store</span>
+              </motion.a>
+              <motion.a
+                whileHover={{ y: -2, scale: 1.02 }}
+                whileTap={{ y: 0, scale: 0.98 }}
+                transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                href="https://play.google.com/store/apps/heyjinie"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
+              >
+                <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
+                <span className="label text-gray-700 font-medium">Google Play</span>
+              </motion.a>
+            </div>
+          </div>
+
+          {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-100 lg:translate-y-140 z-20">
             <Image
-              src="/Blue.png"
-              alt="Blue Gift Box"
-              width={200}
-              height={200}
-              className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+              src="/phone-1.png"
+              alt="HeyJinie App on Phone"
+              width={300}
+              height={600}
+              className="w-64 h-auto md:w-80 object-contain"
             />
           </div>
+        </motion.main>
 
-          {/* Top right */}
-          <div className="absolute top-48 right-4 lg:top-16 lg:right-1/8 transform -rotate-12 animate-float2">
-            <Image
-              src="/Green.png"
-              alt="Green Gift Box"
-              width={200}
-              height={200}
-              className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
-            />
-          </div>
-
-          {/* Middle right */}
-          <div className="absolute top-108 right-6 lg:top-128 lg:right-1/4 transform rotate-6 animate-float3">
-            <Image
-              src="/Sambas.png"
-              alt="Sneaker"
-              width={180}
-              height={100}
-              className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
-            />
-          </div>
-
-          {/* Bottom left */}
-          <div className="absolute top-108 left-6 lg:top-128 lg:left-1/4 transform -rotate-8 animate-float">
-            <Image
-              src="/Headphones.png"
-              alt="Headphones"
-              width={140}
-              height={140}
-              className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
-            />
-          </div>
-
-
-        </div>
-
-        {/* Main Content */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6 leading-tight">
-            Effortless Shopping,<br />
-            Endless Possibilities...
-          </h1>
-
-          <p className="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto">
-            With Heyjinie, you can send real, fun gifts from your chat anytime, anywhere.
-          </p>
-
-          {/* App Download Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <motion.a
-              whileHover={{ y: -2, scale: 1.02 }}
-              whileTap={{ y: 0, scale: 0.98 }}
-              transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              href="https://apps.apple.com/us/app/heyjinie"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
-            >
-              <FaApple className="text-black w-5 h-5" />
-              <span className="label text-gray-700 font-medium">App Store</span>
-            </motion.a>
-            <motion.a
-              whileHover={{ y: -2, scale: 1.02 }}
-              whileTap={{ y: 0, scale: 0.98 }}
-              transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-              href="https://play.google.com/store/apps/heyjinie"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
-            >
-              <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
-              <span className="label text-gray-700 font-medium">Google Play</span>
-            </motion.a>
-          </div>
-        </div>
-
-        {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
-        <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-100 lg:translate-y-140 z-20">
-          <Image
-            src="/phone-1.png"
-            alt="HeyJinie App on Phone"
-            width={300}
-            height={600}
-            className="w-64 h-auto md:w-80 object-contain"
-          />
-        </div>
-      </motion.main>
-
-      {/* Second Section - Heyjinie Stickers */}
-      <motion.section
-        variants={elegantRise}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-110 lg:pt-148"
-      >
+        {/* Second Section - Heyjinie Stickers */}
+        <motion.section
+          variants={elegantRise}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-110 lg:pt-148"
+        >
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -432,15 +432,14 @@ export default function Home() {
         </motion.div>
       </motion.section>
 
-      {/* Third Section - Gifts for Every Occasion */}
-      <motion.section
-        variants={perspectiveFlip}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="px-4  mt-8 lg:mt-0 py-0 mb-20"
-      >
-        <div className="max-w-6xl mx-auto">
+        {/* Third Section - Gifts for Every Occasion */}
+        <motion.section
+          variants={perspectiveFlip}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="px-4 mt-8 lg:mt-0 py-0 mb-20"
+        >
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Side - Text Content */}
             <div>
@@ -464,24 +463,23 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
-      {/* Fourth Section - Celebrate, No Matter the Distance */}
-      <motion.section
-        variants={scaleRotate}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="relative min-h-screen flex items-center justify-center px-4 py-8"
-      >
+        {/* Fourth Section - Celebrate, No Matter the Distance */}
+        <motion.section
+          variants={scaleRotate}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative min-h-screen flex items-center justify-center px-4 py-8"
+        >
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
             src="/bgbanner.png"
             alt="Background Pattern"
             fill
-            className="object-cover"
+            className="object-cover rounded-2xl"
           />
         </div>
 
@@ -642,35 +640,35 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 leading-tight">
-            Celebrate, No Matter the<br />Distance
-          </h2>
-          <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
-            Near or far, you can still make someone smile or lift your own mood.
-          </p>
-        </div>
-      </motion.section>
+          {/* Main Content */}
+          <div className="relative z-10 text-center">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 leading-tight">
+              Celebrate, No Matter the<br />Distance
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
+              Near or far, you can still make someone smile or lift your own mood.
+            </p>
+          </div>
+        </motion.section>
 
-      {/* Fifth Section - Send real product stickers instantly */}
-      <motion.section
-        variants={slideInRight}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="px-4 py-20"
-      >
-        <div className="max-w-6xl mx-auto text-center">
-          {/* Headline */}
-          <h2 className="text-4xl md:text-5xl font-bold text-black mb-3">
-            Send real product stickers instantly
-          </h2>
+        {/* Fifth Section - Send real product stickers instantly */}
+        <motion.section
+          variants={slideInRight}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="px-4 py-20"
+        >
+          <div className="text-center">
+            {/* Headline */}
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-3">
+              Send real product stickers instantly
+            </h2>
 
-          {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-600 mb-4">
-            right from your keyboard inside your favorite messenger app
-          </p>
+            {/* Subtitle */}
+            <p className="text-lg md:text-xl text-gray-600 mb-4">
+              right from your keyboard inside your favorite messenger app
+            </p>
 
           {/* Feature Blocks */}
           <motion.div
@@ -739,14 +737,14 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Sixth Section - Send Smiles Anywhere */}
-      <motion.section
-        variants={perspectiveFlip}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="px-4 py-0 overflow-hidden"
-      >
+        {/* Sixth Section - Send Smiles Anywhere */}
+        <motion.section
+          variants={perspectiveFlip}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="px-4 py-0 overflow-hidden"
+        >
         <div className="flex">
           <div className="animate-scroll whitespace-nowrap text-4xl md:text-5xl font-bold text-gray-700">
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
@@ -771,18 +769,18 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Seventh Section - How it works */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        viewport={{ once: true }}
-        data-sticky-sections
-        className="px-4 py-8 max-w-6xl mx-auto lg:min-h-[400vh]"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-      >
+        {/* Seventh Section - How it works */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true }}
+          data-sticky-sections
+          className="px-4 py-8 lg:min-h-[400vh]"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
         <div className="lg:sticky lg:top-2 lg:min-h-screen space-y-16 lg:space-y-0">
           {/* Content Container */}
           <div className="lg:absolute lg:inset-0">
@@ -965,15 +963,14 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Eighth Section - Deal of the Day & Event Calendar */}
-      <motion.section
-        variants={elegantRise}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="px-4 py-0 mb-20"
-      >
-        <div className="max-w-6xl mx-auto">
+        {/* Eighth Section - Deal of the Day & Event Calendar */}
+        <motion.section
+          variants={elegantRise}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="px-4 py-0 mb-20"
+        >
           <div className="grid md:grid-cols-2 gap-8 text-center md:text-left">
             {/* Deal of the Day Card */}
             <div className="bg-gray-50 rounded-2xl p-8">
@@ -1019,24 +1016,23 @@ export default function Home() {
               </p>
             </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
-      {/* Make Every Occasion Memorable Section */}
-      <motion.section
-        variants={slideInLeft}
-        initial="hidden"
-        whileInView="show"
-        viewport={{ once: true, amount: 0.2 }}
-        className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-0 mb-20"
-      >
+        {/* Make Every Occasion Memorable Section */}
+        <motion.section
+          variants={slideInLeft}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-0 mb-20"
+        >
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
             src="/bgbanner.png"
             alt="Background"
             fill
-            className="object-cover"
+            className="object-cover rounded-2xl"
           />
         </div>
 
@@ -1195,26 +1191,26 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Section - Make Every Moment Personalized */}
-      <motion.section
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-        viewport={{ once: true }}
-        className="relative min-h-screen flex items-center justify-center px-4 py-8"
-      >
-        {/* Background Pattern */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/bgbanner.png"
-            alt="Background Pattern"
-            fill
-            className="object-cover"
-          />
-        </div>
+        {/* Section - Make Every Moment Personalized */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+          viewport={{ once: true }}
+          className="relative min-h-screen flex items-center justify-center px-4 py-8"
+        >
+          {/* Background Pattern */}
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/bgbanner.png"
+              alt="Background Pattern"
+              fill
+              className="object-cover rounded-2xl"
+            />
+          </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
@@ -1271,12 +1267,11 @@ export default function Home() {
         </div>
       </motion.section>
 
-      {/* Contact Form Modal */}
-      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+        {/* Contact Form Modal */}
+        <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
 
-      {/* Footer */}
-      <footer className="px-4 py-16 mt-20" style={{ backgroundColor: '#88C1FD' }}>
-        <div className="max-w-6xl mx-auto">
+        {/* Footer */}
+        <footer className="px-4 py-16 mt-20" style={{ backgroundColor: '#88C1FD' }}>
           {/* Stay Connected Section */}
           <div className="bg-white rounded-2xl p-8 mb-8 text-center md:text-left">
             <h2 className="text-2xl font-bold text-black mb-6">Stay Connected</h2>
@@ -1382,13 +1377,12 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom Copyright & Attribution */}
-          <div className="border-t border-white/20 pt-4">
-            <p className="text-white/70 text-sm text-center">©{new Date().getFullYear()} HeyJinie. Created by Stack Studios</p>
-          </div>
+            {/* Bottom Copyright & Attribution */}
+            <div className="border-t border-white/20 pt-4">
+              <p className="text-white/70 text-sm text-center">©{new Date().getFullYear()} HeyJinie. Created by Stack Studios</p>
+            </div>
+          </footer>
         </div>
-      </footer>
-
-    </div>
-  );
-}
+      </div>
+    );
+  }
