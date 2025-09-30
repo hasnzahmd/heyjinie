@@ -273,46 +273,46 @@ export default function Home() {
           {/* Floating Gift Items */}
           <div className="absolute inset-0 pointer-events-none z-30">
             {/* Top left */}
-            <div className="absolute top-48 left-4 lg:top-16 lg:left-1/8 transform rotate-12 animate-float">
+            <div className="absolute left-0 xxs:left-4 top-28 xxs:top-52 sm:top-6 lg:top-16 lg:left-5 transform rotate-12 animate-float">
               <Image
                 src="/Blue.png"
                 alt="Blue Gift Box"
                 width={200}
                 height={200}
-                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+                className="lg:size-40 size-18 xxs:size-28 object-contain"
               />
             </div>
 
             {/* Top right */}
-            <div className="absolute top-48 right-4 lg:top-16 lg:right-1/8 transform -rotate-12 animate-float2">
+            <div className="absolute right-0 xxs:right-4 top-28 xxs:top-52 sm:top-6 lg:top-16 lg:right-5 transform rotate-12 animate-float2">
               <Image
                 src="/Green.png"
                 alt="Green Gift Box"
                 width={200}
                 height={200}
-                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+                className="lg:size-40 size-18 xxs:size-28 object-contain"
               />
             </div>
 
             {/* Middle right */}
-            <div className="absolute top-108 right-6 lg:top-128 lg:right-1/4 transform rotate-6 animate-float3">
+            <div className="absolute top-108 right-0 xs:right-6 lg:top-128 lg:right-20 transform rotate-6 animate-float3">
               <Image
                 src="/Sambas.png"
                 alt="Sneaker"
                 width={180}
                 height={100}
-                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+                className="lg:size-40 size-22 xxs:size-28 object-contain"
               />
             </div>
 
             {/* Bottom left */}
-            <div className="absolute top-108 left-6 lg:top-128 lg:left-1/4 transform -rotate-8 animate-float">
+            <div className="absolute top-108 left-0 xs:left-6 lg:top-128 lg:left-20 transform -rotate-8 animate-float">
               <Image
                 src="/Headphones.png"
                 alt="Headphones"
                 width={140}
                 height={140}
-                className="lg:w-40 lg:h-40 w-28 h-28 object-contain"
+                className="lg:size-40 size-22 xxs:size-28 object-contain"
               />
             </div>
           </div>
