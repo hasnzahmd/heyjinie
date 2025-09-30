@@ -203,11 +203,11 @@ export default function Home() {
           {/* App Download Icons */}
           <div className="hidden lg:flex items-center gap-3">
             <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-              <FaApple className="text-gray-700 text-base" />
+              <FaApple className="text-black w-5 h-5" />
               <span className="label text-gray-700 text-sm font-medium">App Store</span>
             </a>
             <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-              <FaGooglePlay className="text-gray-700 text-xs" />
+              <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
               <span className="label text-gray-700 text-sm font-medium">Google Play</span>
             </a>
           </div>
@@ -237,11 +237,11 @@ export default function Home() {
                 <div className="h-px bg-gray-200 my-2" />
                 <div className="flex items-center gap-3">
                   <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
-                    <FaApple className="text-gray-700 text-base" />
+                    <FaApple className="text-black w-5 h-5" />
                     <span className="label text-gray-700 text-sm font-medium">App Store</span>
                   </a>
                   <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
-                    <FaGooglePlay className="text-gray-700 text-xs" />
+                    <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
                     <span className="label text-gray-700 text-sm font-medium">Google Play</span>
                   </a>
                 </div>
@@ -339,7 +339,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
             >
-              <FaApple className="text-gray-700 text-xl" />
+              <FaApple className="text-black w-5 h-5" />
               <span className="label text-gray-700 font-medium">App Store</span>
             </motion.a>
             <motion.a
@@ -351,7 +351,7 @@ export default function Home() {
               rel="noopener noreferrer"
               className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
             >
-              <FaGooglePlay className="text-gray-700 text-lg" />
+              <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
               <span className="label text-gray-700 font-medium">Google Play</span>
             </motion.a>
           </div>
@@ -1244,11 +1244,11 @@ export default function Home() {
               {/* App Download Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                 <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
-                  <FaApple className="text-gray-700 text-xl" />
+                  <FaApple className="text-black w-6 h-6" />
                   <span className="label text-gray-700 font-medium">App Store</span>
                 </a>
                 <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
-                  <FaGooglePlay className="text-gray-700 text-lg" />
+                  <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
                   <span className="label text-gray-700 font-medium">Google Play</span>
                 </a>
               </div>
@@ -1282,13 +1282,13 @@ export default function Home() {
             <h2 className="text-2xl font-bold text-black mb-6">Stay Connected</h2>
             <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between gap-6">
               {/* Logo and Contact */}
-              <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
                 <Image
                   src="/logo-1.png"
                   alt="HeyJinie Logo"
-                  width={120}
-                  height={40}
-                  className="h-8 w-auto"
+                  width={150}
+                  height={70}
+                  className=""
                 />
                 <a href="mailto:contact@heyjinie.com" className="text-green-600 font-medium link-underline">
                   contact@heyjinie.com
@@ -1298,11 +1298,11 @@ export default function Home() {
               {/* App Download Icons */}
               <div className="flex items-center gap-3">
                 <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-                  <FaApple className="text-gray-700 text-base" />
+                  <FaApple className="text-black w-5 h-5" />
                   <span className="label text-gray-700 text-sm font-medium">App Store</span>
                 </a>
                 <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-                  <FaGooglePlay className="text-gray-700 text-xs" />
+                  <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
                   <span className="label text-gray-700 text-sm font-medium">Google Play</span>
                 </a>
               </div>
@@ -1384,7 +1384,7 @@ export default function Home() {
 
           {/* Bottom Copyright & Attribution */}
           <div className="border-t border-white/20 pt-4">
-            <p className="text-white/70 text-sm text-center">©2025 HeyJinie. Created by Stack Studios</p>
+            <p className="text-white/70 text-sm text-center">©{new Date().getFullYear()} HeyJinie. Created by Stack Studios</p>
           </div>
         </div>
       </footer>
