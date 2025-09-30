@@ -358,7 +358,7 @@ export default function Home() {
           </div>
 
           {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-100 lg:translate-y-140 z-20">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-85 xxs:translate-y-100 xs:translate-y-115 sm:translate-y-120 md:translate-y-140 z-20">
             <Image
               src="/phone-1.png"
               alt="HeyJinie App on Phone"
@@ -375,7 +375,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="min-h-screen flex flex-col items-center justify-center px-4 pt-110 lg:pt-160"
+          className="min-h-screen flex flex-col items-center justify-center px-4 pt-104 xxs:pt-120 xs:pt-135 sm:pt-140 md:pt-160"
         >
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -438,7 +438,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="px-4 mt-12 lg:mt-20 py-0 mb-20"
+          className="px-4 mt-20 py-0 mb-20"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Side - Text Content */}
