@@ -375,7 +375,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="min-h-screen flex flex-col items-center justify-center px-4 py-16 pt-110 lg:pt-148"
+          className="min-h-screen flex flex-col items-center justify-center px-4 pt-110 lg:pt-160"
         >
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -438,7 +438,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="px-4 mt-8 lg:mt-0 py-0 mb-20"
+          className="px-4 mt-12 lg:mt-20 py-0 mb-20"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Side - Text Content */}
