@@ -181,15 +181,15 @@ export default function Home() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <div className="bg-white pt-4 pb-2">
-        <header className="bg-white rounded-2xl mx-auto px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 max-w-6xl relative z-40">
+        <header className="bg-white rounded-2xl mx-2 lg:mx-auto px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 max-w-6xl relative z-40">
           {/* Logo */}
           <div className="flex items-center">
             <Image
               src="/logo-1.png"
               alt="HeyJinie Logo"
-              width={120}
-              height={40}
-              className="h-8 w-auto"
+              width={150}
+              height={70}
+              className="w-[120px] h-auto md:w-[150px]"
             />
           </div>
 
