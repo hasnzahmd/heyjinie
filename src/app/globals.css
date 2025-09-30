@@ -176,6 +176,10 @@ footer ::selection {
   position: relative;
   z-index: 1;
 }
+.btn-liquid img {
+  position: relative;
+  z-index: 1;
+}
 .btn-liquid::before {
   content: "";
   position: absolute;

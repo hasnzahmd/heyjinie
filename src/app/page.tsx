@@ -339,7 +339,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
               >
-                <FaApple className="text-black w-5 h-5" />
+                <FaApple className="text-black w-6 h-6" />
                 <span className="label text-gray-700 font-medium">App Store</span>
               </motion.a>
               <motion.a
