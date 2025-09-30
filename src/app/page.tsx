@@ -776,7 +776,7 @@ export default function Home() {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           viewport={{ once: true }}
           data-sticky-sections
-          className="px-4 py-8 lg:min-h-[400vh]"
+          className="px-4 py-8 lg:min-h-[400vh] mt-16 lg:mt-0"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
