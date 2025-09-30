@@ -482,7 +482,7 @@ export default function Home() {
         {/* Floating Stickers */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
           {/* Top Left - Cheeseburger */}
-          <div className="absolute hidden lg:block top-42 left-16 lg:top-28 lg:left-56 transform rotate-12 animate-float">
+          <div className="absolute hidden lg:block top-42 left-16 lg:top-18 lg:left-56 transform rotate-12 animate-float">
             <Image
               src="/01.png"
               alt="Cheeseburger"
@@ -492,76 +492,21 @@ export default function Home() {
             />
           </div>
 
-          {/* Top Center-Left - Backpack */}
-          <div className="absolute top-44 left-32 lg:top-22 lg:left-116 transform -rotate-6 animate-float2">
+          {/* Top Center-Left - Shake */}
+          <div className="absolute top-22 lg:top-12 left-24 xs:left-38 sm:left-64 lg:left-108 transform -rotate-6 animate-float2">
             <Image
               src="/02.png"
-              alt="Backpack"
+              alt="Shake"
               width={256}
               height={256}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
             />
           </div>
 
-          {/* Top Center - High Heels */}
-          <div className="absolute top-46 left-2/3 lg:top-28 lg:left-1/2 transform -translate-x-1/2 rotate-8 animate-float3">
+          {/* Top Center - Perfume */}
+          <div className="absolute top-28 left-2/3 lg:top-15 lg:left-160 transform -translate-x-1/2 rotate-8 animate-float3">
             <Image
               src="/03.png"
-              alt="High Heels"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Top Right - Hoodie */}
-          <div className="absolute hidden lg:block top-22 right-4 lg:top-22 lg:right-116 transform -rotate-12 animate-float">
-            <Image
-              src="/04.png"
-              alt="Hoodie"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Top Far Right - Iced Coffee */}
-          <div className="absolute hidden lg:block lg:top-28 lg:right-56 transform rotate-6 animate-float2">
-            <Image
-              src="/05.png"
-              alt="Iced Coffee"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Left - Fast Food Tray */}
-          <div className="absolute top-52 left-2 lg:top-1/3 lg:left-32 transform -rotate-12 animate-float3">
-            <Image
-              src="/06.png"
-              alt="Fast Food Tray"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Center-Left - Running Shoe */}
-          <div className="absolute top-86 left-2 lg:top-76 lg:left-1/5 transform rotate-8 animate-float">
-            <Image
-              src="/07.png"
-              alt="Running Shoe"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Center-Right - Perfume */}
-          <div className="absolute top-52 right-2 lg:top-1/2 lg:right-1/6 transform -rotate-6 animate-float2">
-            <Image
-              src="/08.png"
               alt="Perfume"
               width={256}
               height={256}
@@ -569,21 +514,87 @@ export default function Home() {
             />
           </div>
 
-          {/* Mid-Right - Red Bull */}
-          <div className="absolute top-86 right-2 lg:top-1/3 lg:right-32 transform rotate-12 animate-float3">
+          {/* Top Right - Shoe */}
+          <div className="absolute hidden lg:block top-15 right-4 lg:right-60 transform -rotate-12 animate-float">
             <Image
-              src="/09.png"
-              alt="Red Bull"
+              src="/04.png"
+              alt="Shoe"
               width={256}
               height={256}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
             />
           </div>
 
-          {/* Bottom Left - Sneaker */}
-          <div className="absolute bottom-48 left-2 lg:bottom-32 lg:left-28 transform -rotate-8 animate-float2">
+          {/* Top Far Right - Bagpack */}
+          <div className="absolute hidden lg:block lg:top-28 lg:right-15 transform rotate-6 animate-float2">
+            <Image
+              src="/05.png"
+              alt="Bagpack"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Mid-Left - Blue shoe */}
+          <div className="absolute top-38 lg:top-50 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
+            <Image
+              src="/06.png"
+              alt="Blue shoe"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Mid-Center-Left - Burger */}
+          <div className="absolute top-86 lg:top-78 left-0 xs:left-4 lg:left-60 transform rotate-8 animate-float">
+            <Image
+              src="/07.png"
+              alt="Burger"
+              width={256}
+              height={256}
+              className="size-20 lg:size-28 object-contain"
+            />
+          </div>
+
+          {/* Mid-Center-Right - Red Bull */}
+          <div className="absolute top-36 right-0 lg:top-78 lg:right-65 transform -rotate-6 animate-float2">
+            <Image
+              src="/08.png"
+              alt="Red Bull"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:size-30 object-contain"
+            />
+          </div>
+
+          {/* Mid-Right - Hoodie */}
+          <div className="absolute top-86 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
+            <Image
+              src="/09.png"
+              alt="Hoodie"
+              width={256}
+              height={256}
+              className="size-20 lg:size-28 object-contain"
+            />
+          </div>
+
+          {/* Bottom Left - Heels */}
+          <div className="absolute bottom-30 left-0 xs:left-4 lg:bottom-28 lg:left-24 transform -rotate-8 animate-float2">
             <Image
               src="/10.png"
+              alt="Heels"
+              width={256}
+              height={256}
+              className="size-20 lg:size-28 object-contain"
+            />
+          </div>
+
+          {/* Bottom Center-Left - Sneaker */}
+          <div className="absolute bottom-30 left-24 xs:left-40 sm:left-60 lg:bottom-20 lg:left-1/4 transform rotate-6 animate-float">
+            <Image
+              src="/11.png"
               alt="Sneaker"
               width={256}
               height={256}
@@ -591,10 +602,10 @@ export default function Home() {
             />
           </div>
 
-          {/* Bottom Center-Left */}
-          <div className="absolute bottom-44 left-32 lg:bottom-28 lg:left-1/4 transform rotate-6 animate-float">
+          {/* Bottom Center - Cheeseburger */}
+          <div className="absolute bottom-28 left-2/3 lg:bottom-16 lg:left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
             <Image
-              src="/11.png"
+              src="/01.png"
               alt="Cheeseburger"
               width={256}
               height={256}
@@ -602,33 +613,22 @@ export default function Home() {
             />
           </div>
 
-          {/* Bottom Center */}
-          <div className="absolute bottom-42 left-2/3 lg:bottom-16 lg:left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
-            <Image
-              src="/01.png"
-              alt="Backpack"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center-Right */}
-          <div className="absolute bottom-50 right-2 lg:bottom-28 lg:right-1/4 transform rotate-8 animate-float">
+          {/* Bottom Center-Right - Shake */}
+          <div className="absolute bottom-40 right-0 xs:right-4 lg:bottom-20 lg:right-1/4 transform rotate-8 animate-float">
             <Image
               src="/02.png"
-              alt="High Heels"
+              alt="Shake"
               width={256}
               height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              className="size-20 lg:w-32 lg:h-32 object-contain"
             />
           </div>
 
-          {/* Bottom Right */}
+          {/* Bottom Right - Perfume */}
           <div className="absolute hidden lg:block lg:bottom-28 lg:right-28 transform -rotate-6 animate-float2">
             <Image
               src="/03.png"
-              alt="Hoodie"
+              alt="Perfume"
               width={256}
               height={256}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
@@ -1038,76 +1038,10 @@ export default function Home() {
 
         {/* Floating Product Stickers */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
-          {/* Top Left - Fast Food Meal */}
-          <div className="absolute top-48 left-4 lg:top-22 lg:left-36 transform rotate-12 animate-float">
+          {/* Top Left - Cheeseburger */}
+          <div className="absolute hidden lg:block top-42 left-16 lg:top-18 lg:left-56 transform rotate-12 animate-float">
             <Image
               src="/01.png"
-              alt="Fast Food Meal"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Top Center-Left - Hoodie */}
-          <div className="absolute top-48 left-32 lg:top-26 lg:left-96 transform -rotate-6 animate-float2">
-            <Image
-              src="/02.png"
-              alt="Hoodie"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Top Center - Nike Sneaker */}
-          <div className="absolute top-48 left-64 lg:top-22 lg:left-1/2 transform -translate-x-1/2 rotate-8 animate-float3">
-            <Image
-              src="/03.png"
-              alt="Nike Sneaker"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Top Center-Right - Gift Box */}
-          <div className="absolute top-48 right-4 lg:top-24 lg:right-1/4 transform -rotate-12 animate-float">
-            <Image
-              src="/04.png"
-              alt="Gift Box"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Top Right - Iced Coffee */}
-          <div className="absolute hidden lg:block lg:top-22 lg:right-32 transform rotate-6 animate-float2">
-            <Image
-              src="/05.png"
-              alt="Iced Coffee"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Left - Perfume */}
-          <div className="absolute hidden lg:block lg:top-86 lg:left-96 transform -rotate-8 animate-float3">
-            <Image
-              src="/06.png"
-              alt="Perfume"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Right - Cheeseburger */}
-          <div className="absolute hidden lg:block lg:top-86 lg:right-96 transform -rotate-6 animate-float">
-            <Image
-              src="/09.png"
               alt="Cheeseburger"
               width={256}
               height={256}
@@ -1115,55 +1049,121 @@ export default function Home() {
             />
           </div>
 
-          {/* Bottom Left - Backpack */}
-          <div className="absolute bottom-48 left-4 lg:bottom-32 lg:left-48 transform rotate-8 animate-float2">
-            <Image
-              src="/10.png"
-              alt="Backpack"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center-Left - White Sneaker */}
-          <div className="absolute bottom-48 left-32 lg:bottom-8 lg:left-1/4 transform -rotate-6 animate-float">
-            <Image
-              src="/11.png"
-              alt="White Sneaker"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center */}
-          <div className="absolute bottom-48 left-64 lg:bottom-22 lg:left-1/2 transform -translate-x-1/2 rotate-12 animate-float3">
-            <Image
-              src="/01.png"
-              alt="Fast Food Meal"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center-Right */}
-          <div className="absolute bottom-48 right-4 lg:bottom-8 lg:right-1/4 transform -rotate-8 animate-float">
+          {/* Top Center-Left - Shake */}
+          <div className="absolute top-22 lg:top-12 left-34 xs:left-48 sm:left-70 md:left-90 lg:left-108 transform -rotate-6 animate-float2">
             <Image
               src="/02.png"
+              alt="Shake"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Top Center - Perfume */}
+          <div className="absolute top-28 right-0 xs:right-2 sm:right-16 lg:top-15 lg:right-84 transform -translate-x-1/2 rotate-8 animate-float3">
+            <Image
+              src="/03.png"
+              alt="Perfume"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Top Right - Shoe */}
+          <div className="absolute hidden lg:block top-15 right-4 lg:right-60 transform -rotate-12 animate-float">
+            <Image
+              src="/04.png"
+              alt="Shoe"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Top Far Right - Bagpack */}
+          <div className="absolute hidden lg:block lg:top-28 lg:right-10 transform rotate-6 animate-float2">
+            <Image
+              src="/05.png"
+              alt="Bagpack"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Mid-Left - Blue shoe */}
+          <div className="absolute top-34 lg:top-35 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
+            <Image
+              src="/06.png"
+              alt="Blue shoe"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Mid-Right - Hoodie */}
+          <div className="absolute top-86 right-0 xs:right-4 lg:top-85 lg:right-12 transform rotate-12 animate-float3">
+            <Image
+              src="/09.png"
               alt="Hoodie"
               width={256}
               height={256}
+              className="size-20 lg:size-28 object-contain"
+            />
+          </div>
+
+          {/* Bottom Left - Heels */}
+          <div className="absolute bottom-36 left-0 xs:left-4 xs:bottom-55 lg:left-20 transform -rotate-8 animate-float2">
+            <Image
+              src="/10.png"
+              alt="Heels"
+              width={256}
+              height={256}
+              className="size-20 lg:size-28 object-contain"
+            />
+          </div>
+
+          {/* Bottom Center-Left - Sneaker */}
+          <div className="absolute bottom-30 left-24 xs:left-36 sm:left-50 lg:bottom-20 lg:left-55 transform rotate-6 animate-float">
+            <Image
+              src="/11.png"
+              alt="Sneaker"
+              width={256}
+              height={256}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
             />
           </div>
 
-          {/* Bottom Right */}
-          <div className="absolute hidden lg:block lg:bottom-32 lg:right-48 transform rotate-6 animate-float2">
+          {/* Bottom Center - Cheeseburger */}
+          <div className="absolute bottom-28 left-2/3 sm:left-120 lg:bottom-16 lg:left-125 transform -translate-x-1/2 -rotate-12 animate-float3">
+            <Image
+              src="/01.png"
+              alt="Cheeseburger"
+              width={256}
+              height={256}
+              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Bottom Center-Right - Shake */}
+          <div className="absolute bottom-40 right-0 xs:right-4 lg:bottom-20 md:right-35 lg:right-80 transform rotate-8 animate-float">
+            <Image
+              src="/02.png"
+              alt="Shake"
+              width={256}
+              height={256}
+              className="size-20 lg:w-32 lg:h-32 object-contain"
+            />
+          </div>
+
+          {/* Bottom Right - Perfume */}
+          <div className="absolute hidden lg:block lg:bottom-28 lg:right-28 transform -rotate-6 animate-float2">
             <Image
               src="/03.png"
-              alt="Nike Sneaker"
+              alt="Perfume"
               width={256}
               height={256}
               className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
