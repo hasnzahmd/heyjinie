@@ -1050,7 +1050,7 @@ export default function Home() {
           </div>
 
           {/* Top Center-Left - Shake */}
-          <div className="absolute top-22 lg:top-12 left-34 xs:left-48 sm:left-70 md:left-90 lg:left-108 transform -rotate-6 animate-float2">
+          <div className="absolute top-22 lg:top-12 left-34 xs:left-40 sm:left-60 md:left-60 lg:left-108 transform -rotate-6 animate-float2">
             <Image
               src="/02.png"
               alt="Shake"
@@ -1061,7 +1061,7 @@ export default function Home() {
           </div>
 
           {/* Top Center - Perfume */}
-          <div className="absolute top-28 right-0 xs:right-2 sm:right-16 lg:top-15 lg:right-84 transform -translate-x-1/2 rotate-8 animate-float3">
+          <div className="absolute top-28 right-0 xxs:right-14 xs:right-20 sm:right-36 md:right-46 lg:top-15 lg:right-84 transform -translate-x-1/2 rotate-8 animate-float3">
             <Image
               src="/03.png"
               alt="Perfume"
@@ -1083,7 +1083,7 @@ export default function Home() {
           </div>
 
           {/* Top Far Right - Bagpack */}
-          <div className="absolute hidden lg:block lg:top-28 lg:right-10 transform rotate-6 animate-float2">
+          <div className="absolute hidden lg:block lg:top-24 lg:right-10 transform rotate-6 animate-float2">
             <Image
               src="/05.png"
               alt="Bagpack"
@@ -1094,7 +1094,7 @@ export default function Home() {
           </div>
 
           {/* Mid-Left - Blue shoe */}
-          <div className="absolute top-34 lg:top-35 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
+          <div className="absolute top-34 lg:top-30 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
             <Image
               src="/06.png"
               alt="Blue shoe"
@@ -1105,7 +1105,7 @@ export default function Home() {
           </div>
 
           {/* Mid-Right - Hoodie */}
-          <div className="absolute top-86 right-0 xs:right-4 lg:top-85 lg:right-12 transform rotate-12 animate-float3">
+          <div className="absolute top-50 xxs:top-40 right-0 xs:right-4 lg:top-85 lg:right-12 transform rotate-12 animate-float3">
             <Image
               src="/09.png"
               alt="Hoodie"
