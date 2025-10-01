@@ -258,7 +258,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative min-h-screen flex items-start justify-center px-4 py-8 md:py-16 z-10"
+          className="relative min-h-screen flex items-start justify-center px-4 py-8 md:py-16 z-10 pb-32 md:pb-40 lg:pb-48"
         >
           {/* Background Image - Behind everything in hero section */}
           <div className="absolute inset-0 z-0 w-full">
@@ -358,7 +358,7 @@ export default function Home() {
           </div>
 
           {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-20 xxs:translate-y-20 xs:translate-y-30 sm:translate-y-10 md:translate-y-60 z-20">
+          <div className="absolute left-1/2 transform -translate-x-1/2 z-20 top-110 xxs:top-90 sm:top-70 md:top-90">
             <Image
               src="/phone-1.png"
               alt="HeyJinie App on Phone"
@@ -375,7 +375,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="min-h-screen flex flex-col items-center justify-center px-4 pt-104 xxs:pt-120 xs:pt-135 sm:pt-140 md:pt-160"
+          className="flex flex-col items-center justify-center px-4 [@media(max-height:716px)]:mt-60 [@media(max-height:716px)]:xs:mt-80 [@media(max-height:716px)]:sm:mt-60 [@media(max-height:716px)]:md:mt-110 [@media(max-height:716px)]:xl:mt-90"
         >
         <motion.div
           initial={{ y: 20, opacity: 0 }}
@@ -438,7 +438,7 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.1 }}
-          className="px-4 mt-20 py-0 mb-20"
+          className="px-4 mt-15 sm:mt-20 py-0 mb-20"
         >
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Side - Text Content */}
@@ -548,7 +548,7 @@ export default function Home() {
           </div>
 
           {/* Mid-Center-Left - Burger */}
-          <div className="absolute top-86 lg:top-78 left-0 xs:left-4 lg:left-60 transform rotate-8 animate-float">
+          <div className="absolute top-96 sm:top-86 lg:top-68 left-0 xs:left-4 lg:left-50 transform rotate-8 animate-float">
             <Image
               src="/07.png"
               alt="Burger"
@@ -559,7 +559,7 @@ export default function Home() {
           </div>
 
           {/* Mid-Center-Right - Red Bull */}
-          <div className="absolute top-36 right-0 lg:top-78 lg:right-65 transform -rotate-6 animate-float2">
+          <div className="absolute top-36 right-0 lg:top-68 lg:right-55 transform -rotate-6 animate-float2">
             <Image
               src="/08.png"
               alt="Red Bull"
@@ -570,7 +570,7 @@ export default function Home() {
           </div>
 
           {/* Mid-Right - Hoodie */}
-          <div className="absolute top-86 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
+          <div className="absolute top-96 sm:top-96 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
             <Image
               src="/09.png"
               alt="Hoodie"
