@@ -29,7 +29,7 @@ export default function Home() {
 
   // Elegant slide from right
   const slideInRight = {
-    hidden: { opacity: 0, x: 30 },
+    hidden: { opacity: 0, x: -30 },
     show: {
       opacity: 1,
       x: 0,
