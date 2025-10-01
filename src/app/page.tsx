@@ -258,7 +258,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative px-4 py-8 md:py-16 z-10"
+          className="relative min-h-screen flex items-start justify-center px-4 py-8 md:py-16 z-10"
         >
           {/* Background Image - Behind everything in hero section */}
           <div className="absolute inset-0 z-0 w-full">
@@ -319,12 +319,12 @@ export default function Home() {
 
           {/* Main Content */}
           <div className="relative z-10 text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
               Effortless Shopping,<br />
               Endless Possibilities...
             </h1>
 
-            <p className="text-lg md:text-xl text-black mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-black mb-8 max-w-2xl mx-auto">
               With Heyjinie, you can send real, fun gifts from your chat anytime, anywhere.
             </p>
 
@@ -358,7 +358,7 @@ export default function Home() {
           </div>
 
           {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
-          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-85 xxs:translate-y-100 xs:translate-y-115 sm:translate-y-120 md:translate-y-140 z-20">
+          <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-20 xxs:translate-y-20 xs:translate-y-30 sm:translate-y-10 md:translate-y-60 z-20">
             <Image
               src="/phone-1.png"
               alt="HeyJinie App on Phone"
@@ -420,12 +420,12 @@ export default function Home() {
           </div>
 
           {/* Main Headline */}
-          <h2 className="text-3xl md:text-4xl lg:text-3xl font-bold text-black mb-1">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-1">
             Heyjinie Stickers = Real Surprises
           </h2>
 
           {/* Descriptive Text */}
-          <div className="text-base md:text-sm text-black max-w-2xl mx-auto">
+          <div className="text-base md:text-lg text-black max-w-2xl mx-auto">
             <p className="mb-1">These aren&apos;t just cute stickers.</p>
             <p>They come with real products you or your friends can tap and claim instantly whether you&apos;re sharing a moment or treating yourself.</p>
           </div>
@@ -443,10 +443,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Side - Text Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 leading-tight">
                 Gifts for Every<br />Occasion
               </h2>
-              <p className="text-lg text-black leading-relaxed">
+              <p className="text-base md:text-lg text-black leading-relaxed">
                 From birthdays to &quot;just because&quot; or even a little something for yourself.
                 Explore our huge collection of fun and useful products ready to send, share, or shop in seconds.
               </p>
@@ -638,10 +638,10 @@ export default function Home() {
 
           {/* Main Content */}
           <div className="relative z-10 text-center">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
               Celebrate, No Matter the<br />Distance
             </h2>
-            <p className="text-xl md:text-2xl text-gray-700 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
               Near or far, you can still make someone smile or lift your own mood.
             </p>
           </div>
@@ -657,12 +657,12 @@ export default function Home() {
         >
           <div className="text-center">
             {/* Headline */}
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-3">
               Send real product stickers instantly
             </h2>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-gray-600 mb-4">
+            <p className="text-base md:text-lg text-gray-600 mb-4">
               right from your keyboard inside your favorite messenger app
             </p>
 
@@ -746,7 +746,7 @@ export default function Home() {
           }}
         >
         <div className="flex">
-          <div className="animate-scroll whitespace-nowrap text-4xl md:text-5xl font-bold text-gray-700">
+          <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
@@ -756,7 +756,7 @@ export default function Home() {
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
           </div>
-          <div className="animate-scroll whitespace-nowrap text-4xl md:text-5xl font-bold text-gray-700">
+          <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
             <span className="mr-12">SEND SMILES • ANYWHERE</span>
@@ -788,7 +788,7 @@ export default function Home() {
             <div className="lg:hidden space-y-12">
               <div className="text-center">
                 <p className="text-sm text-gray-600 mb-2">How it works</p>
-                <h2 className="text-4xl font-bold text-black mb-6 leading-tight">
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
                   Choose How<br />you gift
                 </h2>
               </div>
@@ -804,8 +804,8 @@ export default function Home() {
                     className="w-6 h-6 object-contain"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-black">Browse & Discover</h3>
-                <p className="text-lg text-gray-600 max-w-md mx-auto">
+                <h3 className="text-xl md:text-2xl font-bold text-black">Browse & Discover</h3>
+                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
                   Explore our curated collection of real products and find the perfect gift for your loved ones.
                 </p>
                 <div className="flex justify-center">
@@ -830,8 +830,8 @@ export default function Home() {
                     className="w-6 h-6 object-contain"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-black">Send & Share</h3>
-                <p className="text-lg text-gray-600 max-w-md mx-auto">
+                <h3 className="text-xl md:text-2xl font-bold text-black">Send & Share</h3>
+                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
                   Send your chosen gift instantly with a personalized message and watch their reaction in real-time.
                 </p>
                 <div className="flex justify-center">
@@ -856,8 +856,8 @@ export default function Home() {
                     className="w-6 h-6 object-contain"
                   />
                 </div>
-                <h3 className="text-2xl font-bold text-black">Redeem & Enjoy</h3>
-                <p className="text-lg text-gray-600 max-w-md mx-auto">
+                <h3 className="text-xl md:text-2xl font-bold text-black">Redeem & Enjoy</h3>
+                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
                   Your recipient can redeem the physical product and enjoy the surprise you&apos;ve sent them.
                 </p>
                 <div className="flex justify-center">
@@ -877,7 +877,7 @@ export default function Home() {
               <div className="flex-1 flex items-center">
                 <div className="space-y-3 px-4 text-left">
                   <p className="text-sm text-gray-600 mb-2">How it works</p>
-                  <h2 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
                     Choose How<br />you gift
                   </h2>
                   <div className="flex gap-4 mb-6 justify-start">
@@ -928,12 +928,12 @@ export default function Home() {
                     transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                     className="space-y-4"
                   >
-                    <h3 className="text-2xl font-bold text-black">
+                    <h3 className="text-xl md:text-2xl font-bold text-black">
                       {activeStep === 0 && "Browse & Discover"}
                       {activeStep === 1 && "Send & Share"}
                       {activeStep === 2 && "Redeem & Enjoy"}
                     </h3>
-                    <p className="text-lg text-gray-600">
+                    <p className="text-base md:text-lg text-gray-600">
                       {activeStep === 0 && "Explore our curated collection of real products and find the perfect gift for your loved ones."}
                       {activeStep === 1 && "Send your chosen gift instantly with a personalized message and watch their reaction in real-time."}
                       {activeStep === 2 && "Your recipient can redeem the physical product and enjoy the surprise you've sent them."}
@@ -986,10 +986,10 @@ export default function Home() {
               </div>
 
               {/* Title and Description */}
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 leading-tight text-center">
                 Deal of the Day
               </h2>
-              <p className="text-lg text-black leading-relaxed text-center">
+              <p className="text-base md:text-lg text-black leading-relaxed text-center">
                 A new surprise every day! Check out today&apos;s top pick fun, fresh, and perfect whether you&apos;re sending it or adding it to your own collection.
               </p>
             </div>
@@ -1008,10 +1008,10 @@ export default function Home() {
               </div>
 
               {/* Title and Description */}
-              <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 leading-tight text-center">
                 Event Calendar
               </h2>
-              <p className="text-lg text-black leading-relaxed text-center">
+              <p className="text-base md:text-lg text-black leading-relaxed text-center">
                 Never miss a reason to celebrate. Keep track of all the big (and small) days that matter and stay ready to shop, share, or connect with perfect timing.
               </p>
             </div>
@@ -1173,8 +1173,8 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="relative z-20 text-center px-4">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-            Make Every Occasion memorable with
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+            Make Every Occasion Memorable with
           </h2>
 
           {/* Logo */}
@@ -1186,7 +1186,7 @@ export default function Home() {
               height={120}
               className=""
             />
-            <span className="text-4xl md:text-5xl lg:text-6xl font-bold" style={{ color: '#FD9399' }}>HeyJinie</span>
+            <span className="text-2xl md:text-4xl lg:text-5xl font-bold" style={{ color: '#FD9399' }}>HeyJinie</span>
           </div>
         </div>
       </motion.section>
@@ -1213,27 +1213,27 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight">
+              <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
                 Make Every Moment<br />Personalized
               </h1>
 
               {/* Bullet Points */}
               <div className="space-y-4">
                 <div className="md:flex md:items-start md:gap-3">
-                  <span className="hidden md:inline text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                  <p className="text-lg text-black leading-7">Products that feel just right.</p>
+                  <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
+                  <p className="text-base md:text-lg text-black leading-7">Products that feel just right.</p>
                 </div>
 
                 <div className="md:flex md:items-start md:gap-3">
-                  <span className="hidden md:inline text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                  <p className="text-lg text-black leading-7">
+                  <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
+                  <p className="text-base md:text-lg text-black leading-7">
                     With Heyjinie, every gesture becomes meaningful whether it&apos;s a thoughtful message for someone else or a vibe that fits your own mood.
                   </p>
                 </div>
 
                 <div className="md:flex md:items-start md:gap-3">
-                  <span className="hidden md:inline text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                  <p className="text-lg text-black leading-7">Personalized templates and designs make every interaction special.</p>
+                  <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
+                  <p className="text-base md:text-lg text-black leading-7">Personalized templates and designs make every interaction special.</p>
                 </div>
               </div>
 
@@ -1274,7 +1274,7 @@ export default function Home() {
         <footer className="px-4 py-16 mt-20 bg-[#88C1FD] rounded-t-2xl">
           {/* Stay Connected Section */}
           <div className="bg-white rounded-2xl p-8 mb-8 text-center md:text-left">
-            <h2 className="text-2xl font-bold text-black mb-6">Stay Connected</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-black mb-6">Stay Connected</h2>
             <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between gap-6">
               {/* Logo and Contact */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
@@ -1309,7 +1309,7 @@ export default function Home() {
             {/* Left Side - Address */}
             <div className="space-y-8 text-center md:text-left">
               <div>
-                <h3 className="font-semibold text-white text-lg mb-4">Address</h3>
+                <h3 className="font-semibold text-white text-base md:text-lg mb-4">Address</h3>
                 <div className="text-white space-y-6">
                   {/* Head Office */}
                   <div>
