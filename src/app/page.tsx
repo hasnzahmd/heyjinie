@@ -258,7 +258,7 @@ export default function Home() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="relative min-h-screen flex items-start justify-center px-4 py-8 md:py-16 z-10 pb-32 md:pb-40 lg:pb-48"
+          className="relative flex items-start justify-center px-4 py-8 md:py-16 z-10"
         >
           {/* Background Image - Behind everything in hero section */}
           <div className="absolute inset-0 z-0 w-full">
@@ -266,7 +266,7 @@ export default function Home() {
               src="/bgbanner.png"
               alt="Hero Background"
               fill
-              className="object-cover rounded-2xl"
+              className="object-cover rounded-2xl max-h-3/4 md:max-h-screen"
             />
           </div>
 
@@ -328,44 +328,45 @@ export default function Home() {
               With Heyjinie, you can send real, fun gifts from your chat anytime, anywhere.
             </p>
 
-            {/* App Download Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <motion.a
-                whileHover={{ y: -2, scale: 1.02 }}
-                whileTap={{ y: 0, scale: 0.98 }}
-                transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                href="https://apps.apple.com/us/app/heyjinie"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
-              >
-                <FaApple className="text-black w-6 h-6" />
-                <span className="label text-gray-700 font-medium">App Store</span>
-              </motion.a>
-              <motion.a
-                whileHover={{ y: -2, scale: 1.02 }}
-                whileTap={{ y: 0, scale: 0.98 }}
-                transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                href="https://play.google.com/store/apps/heyjinie"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
-              >
-                <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
-                <span className="label text-gray-700 font-medium">Google Play</span>
-              </motion.a>
+            <div className="flex flex-col items-center justify-center gap-8">
+              {/* App Download Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <motion.a
+                  whileHover={{ y: -2, scale: 1.02 }}
+                  whileTap={{ y: 0, scale: 0.98 }}
+                  transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  href="https://apps.apple.com/us/app/heyjinie"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
+                >
+                  <FaApple className="text-black w-6 h-6" />
+                  <span className="label text-gray-700 font-medium">App Store</span>
+                </motion.a>
+                <motion.a
+                  whileHover={{ y: -2, scale: 1.02 }}
+                  whileTap={{ y: 0, scale: 0.98 }}
+                  transition={{ duration: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+                  href="https://play.google.com/store/apps/heyjinie"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
+                >
+                  <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
+                  <span className="label text-gray-700 font-medium">Google Play</span>
+                </motion.a>
+              </div>
+              {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
+              <div className="">
+                <Image
+                  src="/phone-1.png"
+                  alt="HeyJinie App on Phone"
+                  width={300}
+                  height={600}
+                  className="w-64 h-auto md:w-80 object-contain"
+                />
+              </div>
             </div>
-          </div>
-
-          {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 z-20 top-110 xxs:top-90 sm:top-70 md:top-90">
-            <Image
-              src="/phone-1.png"
-              alt="HeyJinie App on Phone"
-              width={300}
-              height={600}
-              className="w-64 h-auto md:w-80 object-contain"
-            />
           </div>
         </motion.main>
 
@@ -375,62 +376,62 @@ export default function Home() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.2 }}
-          className="flex flex-col items-center justify-center px-4 [@media(max-height:716px)]:mt-60 [@media(max-height:716px)]:xs:mt-80 [@media(max-height:716px)]:sm:mt-60 [@media(max-height:716px)]:md:mt-110 [@media(max-height:716px)]:xl:mt-90"
+          className="flex flex-col items-center justify-center px-4 mt-5 sm:mt-0"
         >
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
-          className="text-center max-w-4xl"
-        >
-          {/* Three Product Circles */}
-          <div className="flex justify-center items-center gap-6 mb-6">
-            {/* Foundation Circle */}
-            <div className="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center">
-              <Image
-                src="/001.png"
-                alt="Foundation Bottle"
-                width={40}
-                height={40}
-                className="w-8 h-8 object-contain"
-              />
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] }}
+            className="text-center max-w-4xl"
+          >
+            {/* Three Product Circles */}
+            <div className="flex justify-center items-center gap-6 mb-6">
+              {/* Foundation Circle */}
+              <div className="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center">
+                <Image
+                  src="/001.png"
+                  alt="Foundation Bottle"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+
+              {/* Baseball Cap Circle */}
+              <div className="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center">
+                <Image
+                  src="/002.png"
+                  alt="Baseball Cap"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
+
+              {/* Sandals Circle */}
+              <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center">
+                <Image
+                  src="/003.png"
+                  alt="Sandals"
+                  width={40}
+                  height={40}
+                  className="w-8 h-8 object-contain"
+                />
+              </div>
             </div>
 
-            {/* Baseball Cap Circle */}
-            <div className="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center">
-              <Image
-                src="/002.png"
-                alt="Baseball Cap"
-                width={40}
-                height={40}
-                className="w-8 h-8 object-contain"
-              />
+            {/* Main Headline */}
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-1">
+              Heyjinie Stickers = Real Surprises
+            </h2>
+
+            {/* Descriptive Text */}
+            <div className="text-base md:text-lg text-black max-w-2xl mx-auto">
+              <p className="mb-1">These aren&apos;t just cute stickers.</p>
+              <p>They come with real products you or your friends can tap and claim instantly whether you&apos;re sharing a moment or treating yourself.</p>
             </div>
-
-            {/* Sandals Circle */}
-            <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center">
-              <Image
-                src="/003.png"
-                alt="Sandals"
-                width={40}
-                height={40}
-                className="w-8 h-8 object-contain"
-              />
-            </div>
-          </div>
-
-          {/* Main Headline */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-1">
-            Heyjinie Stickers = Real Surprises
-          </h2>
-
-          {/* Descriptive Text */}
-          <div className="text-base md:text-lg text-black max-w-2xl mx-auto">
-            <p className="mb-1">These aren&apos;t just cute stickers.</p>
-            <p>They come with real products you or your friends can tap and claim instantly whether you&apos;re sharing a moment or treating yourself.</p>
-          </div>
-        </motion.div>
-      </motion.section>
+          </motion.div>
+        </motion.section>
 
         {/* Third Section - Gifts for Every Occasion */}
         <motion.section
@@ -469,172 +470,172 @@ export default function Home() {
         <div
           className="relative min-h-screen flex items-center justify-center px-4 py-8"
         >
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <Image
-            src="/bgbanner.png"
-            alt="Background Pattern"
-            fill
-            className="object-cover rounded-2xl"
-          />
-        </div>
-
-        {/* Floating Stickers */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
-          {/* Top Left - Cheeseburger */}
-          <div className="absolute hidden lg:block top-42 left-16 lg:top-18 lg:left-56 transform rotate-12 animate-float">
+          {/* Background Image */}
+          <div className="absolute inset-0">
             <Image
-              src="/01.png"
-              alt="Cheeseburger"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              src="/bgbanner.png"
+              alt="Background Pattern"
+              fill
+              className="object-cover rounded-2xl"
             />
           </div>
 
-          {/* Top Center-Left - Shake */}
-          <div className="absolute top-22 lg:top-12 left-24 xs:left-38 sm:left-64 lg:left-108 transform -rotate-6 animate-float2">
-            <Image
-              src="/02.png"
-              alt="Shake"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+          {/* Floating Stickers */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
+            {/* Top Left - Cheeseburger */}
+            <div className="absolute hidden lg:block top-42 left-16 lg:top-18 lg:left-56 transform rotate-12 animate-float">
+              <Image
+                src="/01.png"
+                alt="Cheeseburger"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Top Center - Perfume */}
-          <div className="absolute top-28 left-2/3 lg:top-15 lg:left-160 transform -translate-x-1/2 rotate-8 animate-float3">
-            <Image
-              src="/03.png"
-              alt="Perfume"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Top Center-Left - Shake */}
+            <div className="absolute top-22 lg:top-12 left-24 xs:left-38 sm:left-64 lg:left-108 transform -rotate-6 animate-float2">
+              <Image
+                src="/02.png"
+                alt="Shake"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Top Right - Shoe */}
-          <div className="absolute hidden lg:block top-15 right-4 lg:right-60 transform -rotate-12 animate-float">
-            <Image
-              src="/04.png"
-              alt="Shoe"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Top Center - Perfume */}
+            <div className="absolute top-28 left-2/3 lg:top-15 lg:left-160 transform -translate-x-1/2 rotate-8 animate-float3">
+              <Image
+                src="/03.png"
+                alt="Perfume"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Top Far Right - Bagpack */}
-          <div className="absolute hidden lg:block lg:top-28 lg:right-15 transform rotate-6 animate-float2">
-            <Image
-              src="/05.png"
-              alt="Bagpack"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Top Right - Shoe */}
+            <div className="absolute hidden lg:block top-15 right-4 lg:right-60 transform -rotate-12 animate-float">
+              <Image
+                src="/04.png"
+                alt="Shoe"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Mid-Left - Blue shoe */}
-          <div className="absolute top-38 lg:top-50 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
-            <Image
-              src="/06.png"
-              alt="Blue shoe"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Top Far Right - Bagpack */}
+            <div className="absolute hidden lg:block lg:top-28 lg:right-15 transform rotate-6 animate-float2">
+              <Image
+                src="/05.png"
+                alt="Bagpack"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Mid-Center-Left - Burger */}
-          <div className="absolute top-96 sm:top-86 lg:top-68 left-0 xs:left-4 lg:left-50 transform rotate-8 animate-float">
-            <Image
-              src="/07.png"
-              alt="Burger"
-              width={256}
-              height={256}
-              className="size-20 lg:size-28 object-contain"
-            />
-          </div>
+            {/* Mid-Left - Blue shoe */}
+            <div className="absolute top-38 lg:top-50 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
+              <Image
+                src="/06.png"
+                alt="Blue shoe"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Mid-Center-Right - Red Bull */}
-          <div className="absolute top-36 right-0 lg:top-68 lg:right-55 transform -rotate-6 animate-float2">
-            <Image
-              src="/08.png"
-              alt="Red Bull"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:size-30 object-contain"
-            />
-          </div>
+            {/* Mid-Center-Left - Burger */}
+            <div className="absolute top-96 sm:top-86 lg:top-68 left-0 xs:left-4 lg:left-50 transform rotate-8 animate-float">
+              <Image
+                src="/07.png"
+                alt="Burger"
+                width={256}
+                height={256}
+                className="size-20 lg:size-28 object-contain"
+              />
+            </div>
 
-          {/* Mid-Right - Hoodie */}
-          <div className="absolute top-96 sm:top-96 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
-            <Image
-              src="/09.png"
-              alt="Hoodie"
-              width={256}
-              height={256}
-              className="size-20 lg:size-28 object-contain"
-            />
-          </div>
+            {/* Mid-Center-Right - Red Bull */}
+            <div className="absolute top-36 right-0 lg:top-68 lg:right-55 transform -rotate-6 animate-float2">
+              <Image
+                src="/08.png"
+                alt="Red Bull"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:size-30 object-contain"
+              />
+            </div>
 
-          {/* Bottom Left - Heels */}
-          <div className="absolute bottom-30 left-0 xs:left-4 lg:bottom-28 lg:left-24 transform -rotate-8 animate-float2">
-            <Image
-              src="/10.png"
-              alt="Heels"
-              width={256}
-              height={256}
-              className="size-20 lg:size-28 object-contain"
-            />
-          </div>
+            {/* Mid-Right - Hoodie */}
+            <div className="absolute top-96 sm:top-96 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
+              <Image
+                src="/09.png"
+                alt="Hoodie"
+                width={256}
+                height={256}
+                className="size-20 lg:size-28 object-contain"
+              />
+            </div>
 
-          {/* Bottom Center-Left - Sneaker */}
-          <div className="absolute bottom-30 left-24 xs:left-40 sm:left-60 lg:bottom-20 lg:left-1/4 transform rotate-6 animate-float">
-            <Image
-              src="/11.png"
-              alt="Sneaker"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Bottom Left - Heels */}
+            <div className="absolute bottom-30 left-0 xs:left-4 lg:bottom-28 lg:left-24 transform -rotate-8 animate-float2">
+              <Image
+                src="/10.png"
+                alt="Heels"
+                width={256}
+                height={256}
+                className="size-20 lg:size-28 object-contain"
+              />
+            </div>
 
-          {/* Bottom Center - Cheeseburger */}
-          <div className="absolute bottom-28 left-2/3 lg:bottom-16 lg:left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
-            <Image
-              src="/01.png"
-              alt="Cheeseburger"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Bottom Center-Left - Sneaker */}
+            <div className="absolute bottom-30 left-24 xs:left-40 sm:left-60 lg:bottom-20 lg:left-1/4 transform rotate-6 animate-float">
+              <Image
+                src="/11.png"
+                alt="Sneaker"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Bottom Center-Right - Shake */}
-          <div className="absolute bottom-40 right-0 xs:right-4 lg:bottom-20 lg:right-1/4 transform rotate-8 animate-float">
-            <Image
-              src="/02.png"
-              alt="Shake"
-              width={256}
-              height={256}
-              className="size-20 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+            {/* Bottom Center - Cheeseburger */}
+            <div className="absolute bottom-28 left-2/3 lg:bottom-16 lg:left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
+              <Image
+                src="/01.png"
+                alt="Cheeseburger"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
 
-          {/* Bottom Right - Perfume */}
-          <div className="absolute hidden lg:block lg:bottom-28 lg:right-28 transform -rotate-6 animate-float2">
-            <Image
-              src="/03.png"
-              alt="Perfume"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
+            {/* Bottom Center-Right - Shake */}
+            <div className="absolute bottom-40 right-0 xs:right-4 lg:bottom-20 lg:right-1/4 transform rotate-8 animate-float">
+              <Image
+                src="/02.png"
+                alt="Shake"
+                width={256}
+                height={256}
+                className="size-20 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Bottom Right - Perfume */}
+            <div className="absolute hidden lg:block lg:bottom-28 lg:right-28 transform -rotate-6 animate-float2">
+              <Image
+                src="/03.png"
+                alt="Perfume"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
           </div>
-        </div>
 
           {/* Main Content */}
           <div className="relative z-10 text-center">
@@ -666,72 +667,72 @@ export default function Home() {
               right from your keyboard inside your favorite messenger app
             </p>
 
-          {/* Feature Blocks */}
-          <motion.div
-            variants={containerStagger}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.2 }}
-            className="flex justify-center gap-2"
-          >
-            {/* Block 1 - Search */}
+            {/* Feature Blocks */}
             <motion.div
-              variants={fadeUp}
-              className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
+              variants={containerStagger}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              className="flex justify-center gap-2"
             >
-              <Image
-                src="/0001.png"
-                alt="Search for products"
-                width={80}
-                height={80}
-                className="w-24 h-24 object-contain"
-              />
-            </motion.div>
+              {/* Block 1 - Search */}
+              <motion.div
+                variants={fadeUp}
+                className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
+              >
+                <Image
+                  src="/0001.png"
+                  alt="Search for products"
+                  width={80}
+                  height={80}
+                  className="w-24 h-24 object-contain"
+                />
+              </motion.div>
 
-            {/* Block 2 - Discover */}
-            <motion.div
-              variants={fadeUp}
-              className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
-            >
-              <Image
-                src="/0002.png"
-                alt="Discover products"
-                width={80}
-                height={80}
-                className="w-24 h-24 object-contain"
-              />
-            </motion.div>
+              {/* Block 2 - Discover */}
+              <motion.div
+                variants={fadeUp}
+                className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
+              >
+                <Image
+                  src="/0002.png"
+                  alt="Discover products"
+                  width={80}
+                  height={80}
+                  className="w-24 h-24 object-contain"
+                />
+              </motion.div>
 
-            {/* Block 3 - Keyboard */}
-            <motion.div
-              variants={fadeUp}
-              className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
-            >
-              <Image
-                src="/0003.png"
-                alt="Send from keyboard"
-                width={80}
-                height={80}
-                className="w-24 h-24 object-contain"
-              />
-            </motion.div>
+              {/* Block 3 - Keyboard */}
+              <motion.div
+                variants={fadeUp}
+                className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
+              >
+                <Image
+                  src="/0003.png"
+                  alt="Send from keyboard"
+                  width={80}
+                  height={80}
+                  className="w-24 h-24 object-contain"
+                />
+              </motion.div>
 
-            {/* Block 4 - Receive */}
-            <motion.div
-              variants={fadeUp}
-              className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
-            >
-              <Image
-                src="/0004.png"
-                alt="Receive real products"
-                width={80}
-                height={80}
-                className="w-24 h-24 object-contain"
-              />
+              {/* Block 4 - Receive */}
+              <motion.div
+                variants={fadeUp}
+                className="bg-white border border-gray-200 rounded-2xl w-24 h-24 flex items-center justify-center"
+              >
+                <Image
+                  src="/0004.png"
+                  alt="Receive real products"
+                  width={80}
+                  height={80}
+                  className="w-24 h-24 object-contain"
+                />
+              </motion.div>
             </motion.div>
-          </motion.div>
-        </div>
-      </motion.section>
+          </div>
+        </motion.section>
 
         {/* Sixth Section - Send Smiles Anywhere */}
         <motion.section
@@ -745,29 +746,29 @@ export default function Home() {
             WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%)'
           }}
         >
-        <div className="flex">
-          <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
+          <div className="flex">
+            <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+            </div>
+            <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+              <span className="mr-12">SEND SMILES • ANYWHERE</span>
+            </div>
           </div>
-          <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-            <span className="mr-12">SEND SMILES • ANYWHERE</span>
-          </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
         {/* Seventh Section - How it works */}
         <motion.section
@@ -781,187 +782,187 @@ export default function Home() {
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
-        <div className="lg:sticky lg:top-2 lg:min-h-screen space-y-16 lg:space-y-0">
-          {/* Content Container */}
-          <div className="lg:absolute lg:inset-0">
-            {/* Mobile Layout - All Steps Visible */}
-            <div className="lg:hidden space-y-12">
-              <div className="text-center">
-                <p className="text-sm text-gray-600 mb-2">How it works</p>
-                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
-                  Choose How<br />you gift
-                </h2>
-              </div>
-
-              {/* Step 1 - Browse & Discover */}
-              <div className="text-center space-y-6">
-                <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mx-auto">
-                  <Image
-                    src="/Discover.png"
-                    alt="Browse"
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-black">Browse & Discover</h3>
-                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
-                  Explore our curated collection of real products and find the perfect gift for your loved ones.
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/Browse-1.png"
-                    alt="Browse Products"
-                    width={400}
-                    height={300}
-                    className="w-80 h-auto object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Step 2 - Send & Share */}
-              <div className="text-center space-y-6">
-                <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mx-auto">
-                  <Image
-                    src="/Send.png"
-                    alt="Send"
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-black">Send & Share</h3>
-                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
-                  Send your chosen gift instantly with a personalized message and watch their reaction in real-time.
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/Send-2.png"
-                    alt="Send Gift"
-                    width={400}
-                    height={300}
-                    className="w-80 h-auto object-contain"
-                  />
-                </div>
-              </div>
-
-              {/* Step 3 - Redeem & Enjoy */}
-              <div className="text-center space-y-6">
-                <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center mx-auto">
-                  <Image
-                    src="/Redeem.png"
-                    alt="Redeem"
-                    width={24}
-                    height={24}
-                    className="w-6 h-6 object-contain"
-                  />
-                </div>
-                <h3 className="text-xl md:text-2xl font-bold text-black">Redeem & Enjoy</h3>
-                <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
-                  Your recipient can redeem the physical product and enjoy the surprise you&apos;ve sent them.
-                </p>
-                <div className="flex justify-center">
-                  <Image
-                    src="/Redeem-3.png"
-                    alt="Redeem Products"
-                    width={400}
-                    height={300}
-                    className="w-80 h-auto object-contain"
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Desktop Layout - Side by Side */}
-            <div className="hidden lg:flex lg:min-h-full lg:flex-row lg:space-x-20">
-              <div className="flex-1 flex items-center">
-                <div className="space-y-3 px-4 text-left">
+          <div className="lg:sticky lg:top-2 lg:min-h-screen space-y-16 lg:space-y-0">
+            {/* Content Container */}
+            <div className="lg:absolute lg:inset-0">
+              {/* Mobile Layout - All Steps Visible */}
+              <div className="lg:hidden space-y-12">
+                <div className="text-center">
                   <p className="text-sm text-gray-600 mb-2">How it works</p>
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
                     Choose How<br />you gift
                   </h2>
-                  <div className="flex gap-4 mb-6 justify-start">
-                    <button
-                      onClick={() => setActiveStep(0)}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 0 ? 'bg-pink-200' : 'bg-gray-200 hover:bg-gray-300'
-                        }`}
-                    >
-                      <Image
-                        src="/Discover.png"
-                        alt="Browse"
-                        width={24}
-                        height={24}
-                        className="w-6 h-6 object-contain"
-                      />
-                    </button>
-                    <button
-                      onClick={() => setActiveStep(1)}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 1 ? 'bg-blue-200' : 'bg-gray-200 hover:bg-gray-300'
-                        }`}
-                    >
-                      <Image
-                        src="/Send.png"
-                        alt="Send"
-                        width={24}
-                        height={24}
-                        className="w-6 h-6 object-contain"
-                      />
-                    </button>
-                    <button
-                      onClick={() => setActiveStep(2)}
-                      className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 2 ? 'bg-yellow-200' : 'bg-gray-200 hover:bg-gray-300'
-                        }`}
-                    >
-                      <Image
-                        src="/Redeem.png"
-                        alt="Redeem"
-                        width={24}
-                        height={24}
-                        className="w-6 h-6 object-contain"
-                      />
-                    </button>
+                </div>
+
+                {/* Step 1 - Browse & Discover */}
+                <div className="text-center space-y-6">
+                  <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mx-auto">
+                    <Image
+                      src="/Discover.png"
+                      alt="Browse"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-contain"
+                    />
                   </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-black">Browse & Discover</h3>
+                  <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
+                    Explore our curated collection of real products and find the perfect gift for your loved ones.
+                  </p>
+                  <div className="flex justify-center">
+                    <Image
+                      src="/Browse-1.png"
+                      alt="Browse Products"
+                      width={400}
+                      height={300}
+                      className="w-80 h-auto object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Step 2 - Send & Share */}
+                <div className="text-center space-y-6">
+                  <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mx-auto">
+                    <Image
+                      src="/Send.png"
+                      alt="Send"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-black">Send & Share</h3>
+                  <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
+                    Send your chosen gift instantly with a personalized message and watch their reaction in real-time.
+                  </p>
+                  <div className="flex justify-center">
+                    <Image
+                      src="/Send-2.png"
+                      alt="Send Gift"
+                      width={400}
+                      height={300}
+                      className="w-80 h-auto object-contain"
+                    />
+                  </div>
+                </div>
+
+                {/* Step 3 - Redeem & Enjoy */}
+                <div className="text-center space-y-6">
+                  <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center mx-auto">
+                    <Image
+                      src="/Redeem.png"
+                      alt="Redeem"
+                      width={24}
+                      height={24}
+                      className="w-6 h-6 object-contain"
+                    />
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold text-black">Redeem & Enjoy</h3>
+                  <p className="text-base md:text-lg text-gray-600 max-w-md mx-auto">
+                    Your recipient can redeem the physical product and enjoy the surprise you&apos;ve sent them.
+                  </p>
+                  <div className="flex justify-center">
+                    <Image
+                      src="/Redeem-3.png"
+                      alt="Redeem Products"
+                      width={400}
+                      height={300}
+                      className="w-80 h-auto object-contain"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop Layout - Side by Side */}
+              <div className="hidden lg:flex lg:min-h-full lg:flex-row lg:space-x-20">
+                <div className="flex-1 flex items-center">
+                  <div className="space-y-3 px-4 text-left">
+                    <p className="text-sm text-gray-600 mb-2">How it works</p>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
+                      Choose How<br />you gift
+                    </h2>
+                    <div className="flex gap-4 mb-6 justify-start">
+                      <button
+                        onClick={() => setActiveStep(0)}
+                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 0 ? 'bg-pink-200' : 'bg-gray-200 hover:bg-gray-300'
+                          }`}
+                      >
+                        <Image
+                          src="/Discover.png"
+                          alt="Browse"
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 object-contain"
+                        />
+                      </button>
+                      <button
+                        onClick={() => setActiveStep(1)}
+                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 1 ? 'bg-blue-200' : 'bg-gray-200 hover:bg-gray-300'
+                          }`}
+                      >
+                        <Image
+                          src="/Send.png"
+                          alt="Send"
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 object-contain"
+                        />
+                      </button>
+                      <button
+                        onClick={() => setActiveStep(2)}
+                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 2 ? 'bg-yellow-200' : 'bg-gray-200 hover:bg-gray-300'
+                          }`}
+                      >
+                        <Image
+                          src="/Redeem.png"
+                          alt="Redeem"
+                          width={24}
+                          height={24}
+                          className="w-6 h-6 object-contain"
+                        />
+                      </button>
+                    </div>
+                    <motion.div
+                      key={activeStep}
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                      className="space-y-4"
+                    >
+                      <h3 className="text-xl md:text-2xl font-bold text-black">
+                        {activeStep === 0 && "Browse & Discover"}
+                        {activeStep === 1 && "Send & Share"}
+                        {activeStep === 2 && "Redeem & Enjoy"}
+                      </h3>
+                      <p className="text-base md:text-lg text-gray-600">
+                        {activeStep === 0 && "Explore our curated collection of real products and find the perfect gift for your loved ones."}
+                        {activeStep === 1 && "Send your chosen gift instantly with a personalized message and watch their reaction in real-time."}
+                        {activeStep === 2 && "Your recipient can redeem the physical product and enjoy the surprise you've sent them."}
+                      </p>
+                    </motion.div>
+                  </div>
+                </div>
+                <div className="flex-1 flex items-center">
                   <motion.div
-                    key={activeStep}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                    className="space-y-4"
+                    key={`image-${activeStep}`}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="w-full flex justify-center"
                   >
-                    <h3 className="text-xl md:text-2xl font-bold text-black">
-                      {activeStep === 0 && "Browse & Discover"}
-                      {activeStep === 1 && "Send & Share"}
-                      {activeStep === 2 && "Redeem & Enjoy"}
-                    </h3>
-                    <p className="text-base md:text-lg text-gray-600">
-                      {activeStep === 0 && "Explore our curated collection of real products and find the perfect gift for your loved ones."}
-                      {activeStep === 1 && "Send your chosen gift instantly with a personalized message and watch their reaction in real-time."}
-                      {activeStep === 2 && "Your recipient can redeem the physical product and enjoy the surprise you've sent them."}
-                    </p>
+                    <Image
+                      src={activeStep === 0 ? "/Browse-1.png" : activeStep === 1 ? "/Send-2.png" : "/Redeem-3.png"}
+                      alt={activeStep === 0 ? "Browse Products" : activeStep === 1 ? "Send Gift" : "Redeem Products"}
+                      width={400}
+                      height={300}
+                      className="w-80 h-auto object-contain"
+                    />
                   </motion.div>
                 </div>
               </div>
-              <div className="flex-1 flex items-center">
-                <motion.div
-                  key={`image-${activeStep}`}
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-                  className="w-full flex justify-center"
-                >
-                  <Image
-                    src={activeStep === 0 ? "/Browse-1.png" : activeStep === 1 ? "/Send-2.png" : "/Redeem-3.png"}
-                    alt={activeStep === 0 ? "Browse Products" : activeStep === 1 ? "Send Gift" : "Redeem Products"}
-                    width={400}
-                    height={300}
-                    className="w-80 h-auto object-contain"
-                  />
-                </motion.div>
-              </div>
             </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
         {/* Eighth Section - Deal of the Day & Event Calendar */}
         <motion.section
@@ -1026,170 +1027,170 @@ export default function Home() {
           viewport={{ once: true, amount: 0.2 }}
           className="relative min-h-screen flex items-center justify-center overflow-hidden px-4 py-0 mb-20"
         >
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/bgbanner.png"
-            alt="Background"
-            fill
-            className="object-cover rounded-2xl"
-          />
-        </div>
-
-        {/* Floating Product Stickers */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
-          {/* Top Left - Cheeseburger */}
-          <div className="absolute hidden lg:block top-42 left-16 lg:top-18 lg:left-56 transform rotate-12 animate-float">
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
             <Image
-              src="/01.png"
-              alt="Cheeseburger"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              src="/bgbanner.png"
+              alt="Background"
+              fill
+              className="object-cover rounded-2xl"
             />
           </div>
 
-          {/* Top Center-Left - Shake */}
-          <div className="absolute top-22 lg:top-12 left-34 xs:left-40 sm:left-60 md:left-60 lg:left-108 transform -rotate-6 animate-float2">
-            <Image
-              src="/02.png"
-              alt="Shake"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
+          {/* Floating Product Stickers */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
+            {/* Top Left - Cheeseburger */}
+            <div className="absolute hidden lg:block top-42 left-16 lg:top-18 lg:left-56 transform rotate-12 animate-float">
+              <Image
+                src="/01.png"
+                alt="Cheeseburger"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Top Center-Left - Shake */}
+            <div className="absolute top-22 lg:top-12 left-34 xs:left-40 sm:left-60 md:left-60 lg:left-108 transform -rotate-6 animate-float2">
+              <Image
+                src="/02.png"
+                alt="Shake"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Top Center - Perfume */}
+            <div className="absolute top-28 right-0 xxs:right-14 xs:right-20 sm:right-36 md:right-46 lg:top-15 lg:right-84 transform -translate-x-1/2 rotate-8 animate-float3">
+              <Image
+                src="/03.png"
+                alt="Perfume"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Top Right - Shoe */}
+            <div className="absolute hidden lg:block top-15 right-4 lg:right-60 transform -rotate-12 animate-float">
+              <Image
+                src="/04.png"
+                alt="Shoe"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Top Far Right - Bagpack */}
+            <div className="absolute hidden lg:block lg:top-24 lg:right-10 transform rotate-6 animate-float2">
+              <Image
+                src="/05.png"
+                alt="Bagpack"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Mid-Left - Blue shoe */}
+            <div className="absolute top-34 lg:top-30 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
+              <Image
+                src="/06.png"
+                alt="Blue shoe"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Mid-Right - Hoodie */}
+            <div className="absolute top-50 xxs:top-40 right-0 xs:right-4 lg:top-85 lg:right-12 transform rotate-12 animate-float3">
+              <Image
+                src="/09.png"
+                alt="Hoodie"
+                width={256}
+                height={256}
+                className="size-20 lg:size-28 object-contain"
+              />
+            </div>
+
+            {/* Bottom Left - Heels */}
+            <div className="absolute bottom-36 left-0 xs:left-4 xs:bottom-55 lg:left-20 transform -rotate-8 animate-float2">
+              <Image
+                src="/10.png"
+                alt="Heels"
+                width={256}
+                height={256}
+                className="size-20 lg:size-28 object-contain"
+              />
+            </div>
+
+            {/* Bottom Center-Left - Sneaker */}
+            <div className="absolute bottom-30 left-24 xs:left-36 sm:left-50 lg:bottom-20 lg:left-55 transform rotate-6 animate-float">
+              <Image
+                src="/11.png"
+                alt="Sneaker"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Bottom Center - Cheeseburger */}
+            <div className="absolute bottom-28 left-2/3 sm:left-120 lg:bottom-16 lg:left-125 transform -translate-x-1/2 -rotate-12 animate-float3">
+              <Image
+                src="/01.png"
+                alt="Cheeseburger"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Bottom Center-Right - Shake */}
+            <div className="absolute bottom-40 right-0 xs:right-4 lg:bottom-20 md:right-35 lg:right-80 transform rotate-8 animate-float">
+              <Image
+                src="/02.png"
+                alt="Shake"
+                width={256}
+                height={256}
+                className="size-20 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
+
+            {/* Bottom Right - Perfume */}
+            <div className="absolute hidden lg:block lg:bottom-28 lg:right-28 transform -rotate-6 animate-float2">
+              <Image
+                src="/03.png"
+                alt="Perfume"
+                width={256}
+                height={256}
+                className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
+              />
+            </div>
           </div>
 
-          {/* Top Center - Perfume */}
-          <div className="absolute top-28 right-0 xxs:right-14 xs:right-20 sm:right-36 md:right-46 lg:top-15 lg:right-84 transform -translate-x-1/2 rotate-8 animate-float3">
-            <Image
-              src="/03.png"
-              alt="Perfume"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
+          {/* Main Content */}
+          <div className="relative z-20 text-center px-4">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+              Make Every Occasion Memorable with
+            </h2>
 
-          {/* Top Right - Shoe */}
-          <div className="absolute hidden lg:block top-15 right-4 lg:right-60 transform -rotate-12 animate-float">
-            <Image
-              src="/04.png"
-              alt="Shoe"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
+            {/* Logo */}
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Image
+                src="/logoicons.png"
+                alt="Elephant Logo"
+                width={120}
+                height={120}
+                className=""
+              />
+              <span className="text-2xl md:text-4xl lg:text-5xl font-bold" style={{ color: '#FD9399' }}>HeyJinie</span>
+            </div>
           </div>
-
-          {/* Top Far Right - Bagpack */}
-          <div className="absolute hidden lg:block lg:top-24 lg:right-10 transform rotate-6 animate-float2">
-            <Image
-              src="/05.png"
-              alt="Bagpack"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Left - Blue shoe */}
-          <div className="absolute top-34 lg:top-30 left-0 xs:left-2 lg:left-4 transform -rotate-12 animate-float3">
-            <Image
-              src="/06.png"
-              alt="Blue shoe"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Mid-Right - Hoodie */}
-          <div className="absolute top-50 xxs:top-40 right-0 xs:right-4 lg:top-85 lg:right-12 transform rotate-12 animate-float3">
-            <Image
-              src="/09.png"
-              alt="Hoodie"
-              width={256}
-              height={256}
-              className="size-20 lg:size-28 object-contain"
-            />
-          </div>
-
-          {/* Bottom Left - Heels */}
-          <div className="absolute bottom-36 left-0 xs:left-4 xs:bottom-55 lg:left-20 transform -rotate-8 animate-float2">
-            <Image
-              src="/10.png"
-              alt="Heels"
-              width={256}
-              height={256}
-              className="size-20 lg:size-28 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center-Left - Sneaker */}
-          <div className="absolute bottom-30 left-24 xs:left-36 sm:left-50 lg:bottom-20 lg:left-55 transform rotate-6 animate-float">
-            <Image
-              src="/11.png"
-              alt="Sneaker"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center - Cheeseburger */}
-          <div className="absolute bottom-28 left-2/3 sm:left-120 lg:bottom-16 lg:left-125 transform -translate-x-1/2 -rotate-12 animate-float3">
-            <Image
-              src="/01.png"
-              alt="Cheeseburger"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Center-Right - Shake */}
-          <div className="absolute bottom-40 right-0 xs:right-4 lg:bottom-20 md:right-35 lg:right-80 transform rotate-8 animate-float">
-            <Image
-              src="/02.png"
-              alt="Shake"
-              width={256}
-              height={256}
-              className="size-20 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-
-          {/* Bottom Right - Perfume */}
-          <div className="absolute hidden lg:block lg:bottom-28 lg:right-28 transform -rotate-6 animate-float2">
-            <Image
-              src="/03.png"
-              alt="Perfume"
-              width={256}
-              height={256}
-              className="w-24 h-24 lg:w-32 lg:h-32 object-contain"
-            />
-          </div>
-        </div>
-
-        {/* Main Content */}
-        <div className="relative z-20 text-center px-4">
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
-            Make Every Occasion Memorable with
-          </h2>
-
-          {/* Logo */}
-          <div className="flex items-center justify-center gap-4 mb-6">
-            <Image
-              src="/logoicons.png"
-              alt="Elephant Logo"
-              width={120}
-              height={120}
-              className=""
-            />
-            <span className="text-2xl md:text-4xl lg:text-5xl font-bold" style={{ color: '#FD9399' }}>HeyJinie</span>
-          </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
         {/* Section - Make Every Moment Personalized */}
         <motion.section
@@ -1211,61 +1212,61 @@ export default function Home() {
 
           <div className="relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
-              <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
-                Make Every Moment<br />Personalized
-              </h1>
+              {/* Left Content */}
+              <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
+                <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+                  Make Every Moment<br />Personalized
+                </h1>
 
-              {/* Bullet Points */}
-              <div className="space-y-4">
-                <div className="md:flex md:items-start md:gap-3">
-                  <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                  <p className="text-base md:text-lg text-black leading-7">Products that feel just right.</p>
+                {/* Bullet Points */}
+                <div className="space-y-4">
+                  <div className="md:flex md:items-start md:gap-3">
+                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
+                    <p className="text-base md:text-lg text-black leading-7">Products that feel just right.</p>
+                  </div>
+
+                  <div className="md:flex md:items-start md:gap-3">
+                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
+                    <p className="text-base md:text-lg text-black leading-7">
+                      With Heyjinie, every gesture becomes meaningful whether it&apos;s a thoughtful message for someone else or a vibe that fits your own mood.
+                    </p>
+                  </div>
+
+                  <div className="md:flex md:items-start md:gap-3">
+                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
+                    <p className="text-base md:text-lg text-black leading-7">Personalized templates and designs make every interaction special.</p>
+                  </div>
                 </div>
 
-                <div className="md:flex md:items-start md:gap-3">
-                  <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                  <p className="text-base md:text-lg text-black leading-7">
-                    With Heyjinie, every gesture becomes meaningful whether it&apos;s a thoughtful message for someone else or a vibe that fits your own mood.
-                  </p>
+                {/* App Download Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                  <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
+                    <FaApple className="text-black w-6 h-6" />
+                    <span className="label text-gray-700 font-medium">App Store</span>
+                  </a>
+                  <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
+                    <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
+                    <span className="label text-gray-700 font-medium">Google Play</span>
+                  </a>
                 </div>
 
-                <div className="md:flex md:items-start md:gap-3">
-                  <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                  <p className="text-base md:text-lg text-black leading-7">Personalized templates and designs make every interaction special.</p>
-                </div>
+                {/* Availability Text */}
+                <p className="text-gray-600 underline">Available for free</p>
               </div>
 
-              {/* App Download Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
-                  <FaApple className="text-black w-6 h-6" />
-                  <span className="label text-gray-700 font-medium">App Store</span>
-                </a>
-                <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
-                  <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
-                  <span className="label text-gray-700 font-medium">Google Play</span>
-                </a>
+              {/* Right Phone Mockup */}
+              <div className="flex justify-center md:justify-end">
+                <Image
+                  src="/V1.png"
+                  alt="Personalized Phone Mockup"
+                  width={300}
+                  height={600}
+                  className="w-64 h-auto md:w-80 object-contain"
+                />
               </div>
-
-              {/* Availability Text */}
-              <p className="text-gray-600 underline">Available for free</p>
-            </div>
-
-            {/* Right Phone Mockup */}
-            <div className="flex justify-center md:justify-end">
-              <Image
-                src="/V1.png"
-                alt="Personalized Phone Mockup"
-                width={300}
-                height={600}
-                className="w-64 h-auto md:w-80 object-contain"
-              />
             </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
         {/* Contact Form Modal */}
         <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
@@ -1377,12 +1378,12 @@ export default function Home() {
             </div>
           </div>
 
-            {/* Bottom Copyright & Attribution */}
-            <div className="border-t border-white/20 pt-4">
-              <p className="text-white/70 text-sm text-center">©{new Date().getFullYear()} HeyJinie. Created by Stack Studios</p>
-            </div>
-          </footer>
-        </div>
+          {/* Bottom Copyright & Attribution */}
+          <div className="border-t border-white/20 pt-4">
+            <p className="text-white/70 text-sm text-center">©{new Date().getFullYear()} HeyJinie. Created by Stack Studios</p>
+          </div>
+        </footer>
       </div>
-    );
-  }
+    </div>
+  );
+}
