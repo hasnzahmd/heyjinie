@@ -192,7 +192,7 @@ footer ::selection {
   content: "";
   position: absolute;
   inset: -2px; /* tiny bleed to hide seams */
-  background: linear-gradient(135deg, #006e51 30%, #06BD96 100%);
+  background: #40A574;
   transform: translateX(-102%);
   transition: transform .6s cubic-bezier(.22,1,.36,1);
 }
