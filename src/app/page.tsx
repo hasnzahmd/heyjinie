@@ -156,13 +156,13 @@ export default function Home() {
         <div className="bg-white pt-4 pb-1 sm:pb-2">
           <header className="bg-white rounded-2xl mx-2 lg:mx-0 px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 relative z-40">
             {/* Logo */}
-            <div className="flex items-center">
+            <div className="flex items-center max-h-14">
               <Image
                 src="/logo-1.png"
                 alt="HeyJinie Logo"
                 width={150}
                 height={70}
-                className="w-[120px] h-auto md:w-[150px]"
+                className="w-[120px] h-auto md:w-[190px]"
               />
             </div>
 
@@ -761,7 +761,7 @@ export default function Home() {
                 <div className="text-center">
                   <p className="text-sm text-gray-600 mb-2">How it works</p>
                   <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
-                    Choose How<br />you gift
+                    Choose How You Gift
                   </h2>
                 </div>
 
@@ -850,7 +850,7 @@ export default function Home() {
                   <div className="space-y-3 px-4 text-left">
                     <p className="text-sm text-gray-600 mb-2">How it works</p>
                     <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
-                      Choose How<br />you gift
+                      Choose How You Gift
                     </h2>
                     <div className="flex gap-4 mb-6 justify-start">
                       <button
@@ -1249,13 +1249,13 @@ export default function Home() {
             <h2 className="text-xl md:text-2xl font-bold text-black mb-6">Stay Connected</h2>
             <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between gap-6">
               {/* Logo and Contact */}
-              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 max-h-14">
                 <Image
                   src="/logo-1.png"
                   alt="HeyJinie Logo"
                   width={150}
                   height={70}
-                  className=""
+                  className="w-[120px] h-auto md:w-[190px]"
                 />
                 <a href="mailto:contact@heyjinie.com" className="text-green-600 font-medium link-underline">
                   contact@heyjinie.com
