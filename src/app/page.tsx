@@ -510,7 +510,7 @@ export default function Home() {
             </div>
 
             {/* Middle Left - Only on large screens */}
-            <div className="absolute hidden lg:block top-1/2 left-25 transform -translate-y-1/2 -rotate-12 animate-float3">
+            <div className="absolute hidden lg:block top-1/2 left-5 transform -translate-y-1/2 -rotate-12 animate-float3">
               <Image
                 src="/06.png"
                 alt="Blue shoe"
@@ -521,7 +521,7 @@ export default function Home() {
             </div>
 
             {/* Middle Right - Only on large screens */}
-            <div className="absolute hidden lg:block top-1/2 right-25 transform -translate-y-1/2 rotate-12 animate-float">
+            <div className="absolute hidden lg:block top-1/2 right-5 transform -translate-y-1/2 rotate-12 animate-float">
               <Image
                 src="/07.png"
                 alt="Burger"
@@ -1047,7 +1047,7 @@ export default function Home() {
             </div>
 
             {/* Middle Left - Only on large screens */}
-            <div className="absolute hidden lg:block top-1/2 left-25 transform -translate-y-1/2 -rotate-12 animate-float3">
+            <div className="absolute hidden lg:block top-1/2 left-5 transform -translate-y-1/2 -rotate-12 animate-float3">
               <Image
                 src="/06.png"
                 alt="Blue shoe"
@@ -1058,10 +1058,10 @@ export default function Home() {
             </div>
 
             {/* Middle Right - Only on large screens */}
-            <div className="absolute hidden lg:block top-1/2 right-25 transform -translate-y-1/2 rotate-12 animate-float">
+            <div className="absolute hidden lg:block top-1/2 right-5 transform -translate-y-1/2 rotate-12 animate-float">
               <Image
-                src="/09.png"
-                alt="Hoodie"
+                src="/02.png"
+                alt="Shake"
                 width={256}
                 height={256}
                 className="w-20 h-20 object-contain"
@@ -1087,29 +1087,29 @@ export default function Home() {
                 alt="Sneaker"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 object-contain"
               />
             </div>
 
             {/* Bottom Center */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
+            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 rotate-12 animate-float3">
               <Image
-                src="/01.png"
-                alt="Cheeseburger"
+                src="/09.png"
+                alt="Hoodie"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-22 lg:h-22 object-contain"
               />
             </div>
 
             {/* Bottom Center-Right */}
             <div className="absolute bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
               <Image
-                src="/02.png"
-                alt="Shake"
+                src="/06.png"
+                alt="Blue shoe"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain scale-x-[-1]"
               />
             </div>
 
