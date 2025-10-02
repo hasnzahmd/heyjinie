@@ -153,7 +153,7 @@ export default function Home() {
       {/* Main Container for all content */}
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <div className="bg-white pt-4 pb-1 sm:pb-2">
+        <div className="bg-white pt-4 pb-1 sm:pb-2 md:pb-3">
           <header className="bg-white rounded-2xl mx-2 lg:mx-0 px-6 py-4 flex items-center justify-between shadow-sm border border-gray-100 relative z-40">
             {/* Logo */}
             <div className="flex items-center max-h-14">

@@ -217,7 +217,7 @@ footer ::selection {
 .link-underline {
   position: relative;
   text-decoration: none;
-  background-image: linear-gradient(currentColor, currentColor);
+  background-image: linear-gradient(#40A574, #40A574);
   background-size: 0% 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
