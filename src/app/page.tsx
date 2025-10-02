@@ -549,7 +549,7 @@ export default function Home() {
             </div>
 
             {/* Mid-Center-Left - Burger */}
-            <div className="absolute top-96 sm:top-86 lg:top-68 left-0 xs:left-4 lg:left-50 transform rotate-8 animate-float">
+            <div className="absolute top-96 hidden sm:block sm:top-86 lg:top-68 left-0 xs:left-4 lg:left-50 transform rotate-8 animate-float">
               <Image
                 src="/07.png"
                 alt="Burger"
@@ -571,7 +571,7 @@ export default function Home() {
             </div>
 
             {/* Mid-Right - Hoodie */}
-            <div className="absolute top-96 sm:top-96 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
+            <div className="absolute top-96 hidden sm:block sm:top-96 right-0 xs:right-4 lg:top-70 lg:right-12 transform rotate-12 animate-float3">
               <Image
                 src="/09.png"
                 alt="Hoodie"
