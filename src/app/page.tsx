@@ -1220,9 +1220,6 @@ export default function Home() {
                     <span className="label text-gray-700 font-medium">Google Play</span>
                   </a>
                 </div>
-
-                {/* Availability Text */}
-                <p className="text-gray-600 underline">Available for free</p>
               </div>
 
               {/* Right Phone Mockup */}
