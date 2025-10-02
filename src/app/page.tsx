@@ -455,7 +455,7 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
             {/* Top Row - Evenly spaced across the top */}
             {/* Top Left */}
-            <div className="absolute top-20 left-8 sm:left-16 lg:left-24 transform rotate-12 animate-float">
+            <div className="absolute top-20 left-0 sm:left-16 lg:left-24 transform rotate-12 animate-float">
               <Image
                 src="/01.png"
                 alt="Cheeseburger"
@@ -466,7 +466,7 @@ export default function Home() {
             </div>
 
             {/* Top Center-Left */}
-            <div className="absolute top-20 left-1/4 transform -rotate-6 animate-float2">
+            <div className="absolute top-20 left-[20%] sm:left-1/4 transform -rotate-6 animate-float2">
               <Image
                 src="/02.png"
                 alt="Shake"
@@ -488,7 +488,7 @@ export default function Home() {
             </div>
 
             {/* Top Center-Right */}
-            <div className="absolute top-20 right-1/4 transform -rotate-12 animate-float">
+            <div className="absolute top-20 right-[20%] sm:right-1/4 transform -rotate-12 animate-float">
               <Image
                 src="/04.png"
                 alt="Shoe"
@@ -499,7 +499,7 @@ export default function Home() {
             </div>
 
             {/* Top Right */}
-            <div className="absolute top-20 right-8 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
+            <div className="absolute top-20 right-0 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
               <Image
                 src="/05.png"
                 alt="Bagpack"
@@ -533,7 +533,7 @@ export default function Home() {
 
             {/* Bottom Row - Evenly spaced across the bottom */}
             {/* Bottom Left */}
-            <div className="absolute bottom-20 left-8 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
+            <div className="absolute bottom-20 left-0 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
               <Image
                 src="/08.png"
                 alt="Red Bull"
@@ -544,7 +544,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Center-Left */}
-            <div className="absolute bottom-20 left-1/4 transform rotate-6 animate-float">
+            <div className="absolute bottom-20 left-[20%] sm:left-1/4 transform rotate-6 animate-float">
               <Image
                 src="/09.png"
                 alt="Hoodie"
@@ -566,7 +566,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Center-Right */}
-            <div className="absolute bottom-20 right-1/4 transform rotate-8 animate-float">
+            <div className="absolute bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
               <Image
                 src="/11.png"
                 alt="Sneaker"
@@ -577,7 +577,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Right */}
-            <div className="absolute bottom-20 right-8 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
+            <div className="absolute bottom-20 right-0 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
               <Image
                 src="/01.png"
                 alt="Cheeseburger"
@@ -992,7 +992,7 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
             {/* Top Row - Mobile: 4 icons, Large: 5 icons */}
             {/* Top Left */}
-            <div className="absolute top-20 left-8 sm:left-16 lg:left-24 transform rotate-12 animate-float">
+            <div className="absolute top-20 left-0 sm:left-16 lg:left-24 transform rotate-12 animate-float">
               <Image
                 src="/01.png"
                 alt="Cheeseburger"
@@ -1003,7 +1003,7 @@ export default function Home() {
             </div>
 
             {/* Top Center-Left */}
-            <div className="absolute top-20 left-1/4 transform -rotate-6 animate-float2">
+            <div className="absolute top-20 left-[20%] sm:left-1/4 transform -rotate-6 animate-float2">
               <Image
                 src="/02.png"
                 alt="Shake"
@@ -1025,7 +1025,7 @@ export default function Home() {
             </div>
 
             {/* Top Center-Right */}
-            <div className="absolute top-20 right-1/4 transform -rotate-12 animate-float">
+            <div className="absolute top-20 right-[20%] sm:right-1/4 transform -rotate-12 animate-float">
               <Image
                 src="/04.png"
                 alt="Shoe"
@@ -1036,7 +1036,7 @@ export default function Home() {
             </div>
 
             {/* Top Right */}
-            <div className="absolute top-20 right-8 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
+            <div className="absolute top-20 right-0 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
               <Image
                 src="/05.png"
                 alt="Bagpack"
@@ -1070,7 +1070,7 @@ export default function Home() {
 
             {/* Bottom Row - Mobile: 4 icons, Large: 5 icons */}
             {/* Bottom Left */}
-            <div className="absolute bottom-20 left-8 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
+            <div className="absolute bottom-20 left-0 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
               <Image
                 src="/10.png"
                 alt="Heels"
@@ -1081,7 +1081,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Center-Left */}
-            <div className="absolute bottom-20 left-1/4 transform rotate-6 animate-float">
+            <div className="absolute bottom-20 left-[20%] sm:left-1/4 transform rotate-6 animate-float">
               <Image
                 src="/11.png"
                 alt="Sneaker"
@@ -1103,7 +1103,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Center-Right */}
-            <div className="absolute bottom-20 right-1/4 transform rotate-8 animate-float">
+            <div className="absolute bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
               <Image
                 src="/02.png"
                 alt="Shake"
@@ -1114,7 +1114,7 @@ export default function Home() {
             </div>
 
             {/* Bottom Right */}
-            <div className="absolute bottom-20 right-8 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
+            <div className="absolute bottom-20 right-0 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
               <Image
                 src="/03.png"
                 alt="Perfume"
