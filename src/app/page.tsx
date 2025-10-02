@@ -1,21 +1,14 @@
 "use client";
 import Image from "next/image";
-import { FaApple, FaGooglePlay, FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok, FaGift, FaBars, FaTimes } from "react-icons/fa";
+import Link from "next/link";
+import { FaApple, FaFacebookF, FaLinkedinIn, FaInstagram, FaTiktok, FaGift, FaBars, FaTimes } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   // Reusable animation variants
-  const sectionReveal = {
-    hidden: { opacity: 0, y: 20 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }
-    }
-  };
 
   // Elegant slide from left
   const slideInLeft = {
@@ -37,15 +30,6 @@ export default function Home() {
     }
   };
 
-  // Playful scale and rotate
-  const scaleRotate = {
-    hidden: { opacity: 0, scale: 0.9 },
-    show: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, ease: [0.25, 0.46, 0.45, 0.94] as const }
-    }
-  };
 
   // Elegant rise with slight bounce
   const elegantRise = {
@@ -86,17 +70,6 @@ export default function Home() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   // Navigation functions for mobile arrows
-  const [slideDirection, setSlideDirection] = useState<'left' | 'right'>('right');
-
-  const goToPrevStep = () => {
-    setSlideDirection('left');
-    setActiveStep(activeStep > 0 ? activeStep - 1 : 2);
-  };
-
-  const goToNextStep = () => {
-    setSlideDirection('right');
-    setActiveStep(activeStep < 2 ? activeStep + 1 : 0);
-  };
 
   // Minimum distance for a swipe
   const minSwipeDistance = 50;
@@ -118,11 +91,9 @@ export default function Home() {
     const isRightSwipe = distance < -minSwipeDistance;
 
     if (isLeftSwipe && activeStep < 2) {
-      setSlideDirection('right');
       setActiveStep(activeStep + 1);
     }
     if (isRightSwipe && activeStep > 0) {
-      setSlideDirection('left');
       setActiveStep(activeStep - 1);
     }
   };
@@ -199,7 +170,7 @@ export default function Home() {
             <nav className="hidden md:flex items-center gap-8">
               <a href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">HeyJinie Business</a>
               <button onClick={() => setIsContactOpen(true)} className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Contact us</button>
-              <a href="https://heyjinie.com/blog.html" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Blog</a>
+              <Link href="/blog" className="text-gray-600 hover:text-gray-800 transition-colors link-underline">Blog</Link>
             </nav>
 
             {/* App Download Icons */}
@@ -235,7 +206,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-700 hover:text-gray-900 transition-colors">HeyJinie Business</a>
                   <button onClick={() => { setIsMenuOpen(false); setIsContactOpen(true); }} className="text-gray-700 hover:text-gray-900 transition-colors text-left">Contact us</button>
-                  <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/blog.html" className="text-gray-700 hover:text-gray-900 transition-colors">Blog</a>
+                  <Link onClick={() => setIsMenuOpen(false)} href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors">Blog</Link>
                   <div className="h-px bg-gray-200 my-2" />
                   <div className="flex items-center gap-3">
                     <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
@@ -1348,7 +1319,7 @@ export default function Home() {
                 <div className="space-y-4">
                   <a href="https://heyjinie.com/hey-jinie-business.html" className="block text-white/90 hover:text-white transition-colors link-underline">HeyJinie Business</a>
                   <button onClick={() => setIsContactOpen(true)} className="block text-white/90 hover:text-white transition-colors link-underline w-full text-center md:text-left">Contact us</button>
-                  <a href="https://heyjinie.com/blog.html" className="block text-white/90 hover:text-white transition-colors link-underline">Blog</a>
+                  <Link href="/blog" className="block text-white/90 hover:text-white transition-colors link-underline">Blog</Link>
                 </div>
                 <div className="space-y-4">
                   <a href="https://webapp.heyjinie.com/privacy-policy" className="block text-white/90 hover:text-white transition-colors link-underline">Privacy Policy</a>
