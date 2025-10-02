@@ -186,18 +186,18 @@ export default function Home() {
             </div>
 
             {/* Mobile Menu Toggle + Start Gifting */}
-            <div className="flex items-center gap-2">
-              <button
-                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? <FaTimes /> : <FaBars />}
-              </button>
+            <div className="flex items-center gap-2 xs:gap-3">
               <a href="https://webapp.heyjinie.com/auth" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
                 <FaGift className="text-gray-700" />
                 <span className="label text-gray-700 text-sm font-medium">Start Gifting</span>
               </a>
+              <button
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 cursor-pointer"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <FaTimes /> : <FaBars />}
+              </button>
             </div>
 
             {/* Mobile Dropdown Menu */}
