@@ -358,35 +358,35 @@ export default function Home() {
             {/* Three Product Circles */}
             <div className="flex justify-center items-center gap-6 mb-6">
               {/* Foundation Circle */}
-              <div className="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center">
+              <div className="w-18 h-18 bg-blue-200 rounded-full flex items-center justify-center">
                 <Image
                   src="/001.png"
                   alt="Foundation Bottle"
                   width={40}
                   height={40}
-                  className="w-8 h-8 object-contain"
+                  className="w-12 h-12 object-contain"
                 />
               </div>
 
               {/* Baseball Cap Circle */}
-              <div className="w-16 h-16 bg-pink-200 rounded-full flex items-center justify-center">
+              <div className="w-18 h-18 bg-pink-200 rounded-full flex items-center justify-center">
                 <Image
                   src="/002.png"
                   alt="Baseball Cap"
                   width={40}
                   height={40}
-                  className="w-8 h-8 object-contain"
+                  className="w-12 h-12 object-contain"
                 />
               </div>
 
               {/* Sandals Circle */}
-              <div className="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center">
+              <div className="w-18 h-18 bg-yellow-200 rounded-full flex items-center justify-center">
                 <Image
                   src="/003.png"
                   alt="Sandals"
                   width={40}
                   height={40}
-                  className="w-8 h-8 object-contain"
+                  className="w-12 h-12 object-contain"
                 />
               </div>
             </div>
@@ -767,13 +767,13 @@ export default function Home() {
 
                 {/* Step 1 - Browse & Discover */}
                 <div className="text-center space-y-6">
-                  <div className="w-12 h-12 bg-pink-200 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-14 h-14 bg-pink-200 rounded-full flex items-center justify-center mx-auto">
                     <Image
                       src="/Discover.png"
                       alt="Browse"
                       width={24}
                       height={24}
-                      className="w-6 h-6 object-contain"
+                      className="w-10 h-10 object-contain"
                     />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-black">Browse & Discover</h3>
@@ -793,13 +793,13 @@ export default function Home() {
 
                 {/* Step 2 - Send & Share */}
                 <div className="text-center space-y-6">
-                  <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-14 h-14 bg-blue-200 rounded-full flex items-center justify-center mx-auto">
                     <Image
                       src="/Send.png"
                       alt="Send"
                       width={24}
                       height={24}
-                      className="w-6 h-6 object-contain"
+                      className="w-10 h-10 object-contain"
                     />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-black">Send & Share</h3>
@@ -819,13 +819,13 @@ export default function Home() {
 
                 {/* Step 3 - Redeem & Enjoy */}
                 <div className="text-center space-y-6">
-                  <div className="w-12 h-12 bg-yellow-200 rounded-full flex items-center justify-center mx-auto">
+                  <div className="w-14 h-14 bg-yellow-200 rounded-full flex items-center justify-center mx-auto">
                     <Image
                       src="/Redeem.png"
                       alt="Redeem"
                       width={24}
                       height={24}
-                      className="w-6 h-6 object-contain"
+                      className="w-10 h-10 object-contain"
                     />
                   </div>
                   <h3 className="text-xl md:text-2xl font-bold text-black">Redeem & Enjoy</h3>
@@ -855,7 +855,7 @@ export default function Home() {
                     <div className="flex gap-4 mb-6 justify-start">
                       <button
                         onClick={() => setActiveStep(0)}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 0 ? 'bg-pink-200' : 'bg-gray-200 hover:bg-gray-300'
+                        className={`w-14 h-14 rounded-full flex items-center justify-center transition-colors ${activeStep === 0 ? 'bg-pink-200' : 'bg-gray-200 hover:bg-gray-300'
                           }`}
                       >
                         <Image
@@ -863,12 +863,12 @@ export default function Home() {
                           alt="Browse"
                           width={24}
                           height={24}
-                          className="w-6 h-6 object-contain"
+                          className="w-10 h-10 object-contain"
                         />
                       </button>
                       <button
                         onClick={() => setActiveStep(1)}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 1 ? 'bg-blue-200' : 'bg-gray-200 hover:bg-gray-300'
+                        className={`w-14 h-14 rounded-full flex items-center justify-center transition-colors ${activeStep === 1 ? 'bg-blue-200' : 'bg-gray-200 hover:bg-gray-300'
                           }`}
                       >
                         <Image
@@ -876,12 +876,12 @@ export default function Home() {
                           alt="Send"
                           width={24}
                           height={24}
-                          className="w-6 h-6 object-contain"
+                          className="w-10 h-10 object-contain"
                         />
                       </button>
                       <button
                         onClick={() => setActiveStep(2)}
-                        className={`w-12 h-12 rounded-full flex items-center justify-center transition-colors ${activeStep === 2 ? 'bg-yellow-200' : 'bg-gray-200 hover:bg-gray-300'
+                        className={`w-14 h-14 rounded-full flex items-center justify-center transition-colors ${activeStep === 2 ? 'bg-yellow-200' : 'bg-gray-200 hover:bg-gray-300'
                           }`}
                       >
                         <Image
@@ -889,7 +889,7 @@ export default function Home() {
                           alt="Redeem"
                           width={24}
                           height={24}
-                          className="w-6 h-6 object-contain"
+                          className="w-10 h-10 object-contain"
                         />
                       </button>
                     </div>
