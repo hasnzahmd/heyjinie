@@ -23,6 +23,11 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
 html {
   color-scheme: only light;
 }
@@ -249,4 +254,25 @@ footer ::selection {
 }
 .scrollbar-hide::-webkit-scrollbar { 
   display: none;  /* Safari and Chrome */
+}
+
+/* Height-responsive positioning for floating stickers */
+/* For screens with height less than 360px, reset positions to 0 */
+@media (max-height: 360px) {
+  .gap-top-20 {
+    top: 0 !important;
+  }
+  .gap-bottom-20 {
+    bottom: 0 !important;
+  }
+}
+
+/* For screens with height 360px or more, apply normal spacing */
+@media (min-height: 360px) {
+  .gap-top-20 {
+    top: 5rem; /* top-20 = 5rem */
+  }
+  .gap-bottom-20 {
+    bottom: 5rem; /* bottom-20 = 5rem */
+  }
 }

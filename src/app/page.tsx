@@ -121,11 +121,11 @@ export default function Home() {
           const sectionProgress = Math.max(0, Math.min(1, (scrollTop - sectionTop) / sectionHeight));
 
           // Determine active step based on scroll progress
-          // Each step takes 1/3 of the section
+          // Faster transitions - each step takes less scrolling
           let newStep = 0;
-          if (sectionProgress >= 0.66) {
+          if (sectionProgress >= 0.4) {
             newStep = 2; // Redeem
-          } else if (sectionProgress >= 0.33) {
+          } else if (sectionProgress >= 0.2) {
             newStep = 1; // Send
           } else {
             newStep = 0; // Browse
@@ -177,23 +177,23 @@ export default function Home() {
             <div className="hidden lg:flex items-center gap-3">
               <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
                 <FaApple className="text-black w-5 h-5" />
-                <span className="label text-gray-700 text-sm font-medium">App Store</span>
+                <span className="label text-[#666] text-sm font-medium">App Store</span>
               </a>
               <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
                 <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
-                <span className="label text-gray-700 text-sm font-medium">Google Play</span>
+                <span className="label text-[#666] text-sm font-medium">Google Play</span>
               </a>
             </div>
 
             {/* Mobile Menu Toggle + Start Gifting */}
             <div className="flex items-center gap-2 xs:gap-3">
               <a href="https://webapp.heyjinie.com/auth" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
-                <FaGift className="text-gray-700" />
-                <span className="label text-gray-700 text-sm font-medium">Start Gifting</span>
+                <FaGift className="text-[#666]" />
+                <span className="label text-[#666] text-sm font-medium">Start Gifting</span>
               </a>
               <button
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-gray-700 cursor-pointer"
+                className="md:hidden w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 text-[#666] cursor-pointer"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
               >
                 {isMenuOpen ? <FaTimes /> : <FaBars />}
@@ -204,18 +204,18 @@ export default function Home() {
             {isMenuOpen && (
               <div className="absolute md:hidden top-full left-4 right-4 mt-2 bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50">
                 <div className="flex flex-col gap-3">
-                  <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/hey-jinie-business.html" className="text-gray-700 hover:text-gray-900 transition-colors">HeyJinie Business</a>
-                  <button onClick={() => { setIsMenuOpen(false); setIsContactOpen(true); }} className="text-gray-700 hover:text-gray-900 transition-colors text-left">Contact us</button>
-                  <Link onClick={() => setIsMenuOpen(false)} href="/blog" className="text-gray-700 hover:text-gray-900 transition-colors">Blog</Link>
+                  <a onClick={() => setIsMenuOpen(false)} href="https://heyjinie.com/hey-jinie-business.html" className="text-[#666] hover:text-gray-900 transition-colors">HeyJinie Business</a>
+                  <button onClick={() => { setIsMenuOpen(false); setIsContactOpen(true); }} className="text-[#666] hover:text-gray-900 transition-colors text-left">Contact us</button>
+                  <Link onClick={() => setIsMenuOpen(false)} href="/blog" className="text-[#666] hover:text-gray-900 transition-colors">Blog</Link>
                   <div className="h-px bg-gray-200 my-2" />
                   <div className="flex items-center gap-3">
                     <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
                       <FaApple className="text-black w-5 h-5" />
-                      <span className="label text-gray-700 text-sm font-medium">App Store</span>
+                      <span className="label text-[#666] text-sm font-medium">App Store</span>
                     </a>
                     <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2 w-full justify-center">
                       <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
-                      <span className="label text-gray-700 text-sm font-medium">Google Play</span>
+                      <span className="label text-[#666] text-sm font-medium">Google Play</span>
                     </a>
                   </div>
                 </div>
@@ -290,12 +290,12 @@ export default function Home() {
 
           {/* Main Content */}
           <div className="relative z-10 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-black mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl font-bold text-[#333] mb-6 leading-tight">
               Effortless Shopping,<br />
               Endless Possibilities...
             </h1>
 
-            <p className="text-base md:text-lg text-black mb-8 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-[#666] mb-8 max-w-2xl mx-auto">
               With Heyjinie, you can send real, fun gifts from your chat anytime, anywhere.
             </p>
 
@@ -312,7 +312,7 @@ export default function Home() {
                   className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
                 >
                   <FaApple className="text-black w-6 h-6" />
-                  <span className="label text-gray-700 font-medium">App Store</span>
+                  <span className="label text-[#666] font-medium">App Store</span>
                 </motion.a>
                 <motion.a
                   whileHover={{ y: -2, scale: 1.02 }}
@@ -324,7 +324,7 @@ export default function Home() {
                   className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3"
                 >
                   <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
-                  <span className="label text-gray-700 font-medium">Google Play</span>
+                  <span className="label text-[#666] font-medium">Google Play</span>
                 </motion.a>
               </div>
               {/* Phone Mockup - Positioned at bottom, barely covering buttons */}
@@ -392,12 +392,12 @@ export default function Home() {
             </div>
 
             {/* Main Headline */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-1">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-1">
               Heyjinie Stickers = Real Surprises
             </h2>
 
             {/* Descriptive Text */}
-            <div className="text-base md:text-lg text-black max-w-2xl mx-auto">
+            <div className="text-base md:text-lg text-[#666] max-w-2xl mx-auto">
               <p className="mb-1">These aren&apos;t just cute stickers.</p>
               <p>They come with real products you or your friends can tap and claim instantly whether you&apos;re sharing a moment or treating yourself.</p>
             </div>
@@ -415,10 +415,10 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center text-center md:text-left">
             {/* Left Side - Text Content */}
             <div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 leading-tight">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-4 leading-tight">
                 Gifts for Every<br />Occasion
               </h2>
-              <p className="text-base md:text-lg text-black leading-relaxed">
+              <p className="text-base md:text-lg text-[#666] leading-relaxed">
                 From birthdays to &quot;just because&quot; or even a little something for yourself.
                 Explore our huge collection of fun and useful products ready to send, share, or shop in seconds.
               </p>
@@ -455,57 +455,57 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
             {/* Top Row - Evenly spaced across the top */}
             {/* Top Left */}
-            <div className="absolute top-20 left-0 sm:left-16 lg:left-24 transform rotate-12 animate-float">
+            <div className="absolute gap-top-20 left-0 sm:left-16 lg:left-24 transform rotate-12 animate-float">
               <Image
                 src="/01.png"
                 alt="Cheeseburger"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Center-Left */}
-            <div className="absolute top-20 left-[20%] sm:left-1/4 transform -rotate-6 animate-float2">
+            <div className="absolute gap-top-20 left-[20%] sm:left-1/4 transform -rotate-6 animate-float2">
               <Image
                 src="/02.png"
                 alt="Shake"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Center */}
-            <div className="absolute top-20 left-1/2 transform -translate-x-1/2 rotate-8 animate-float3">
+            <div className="absolute gap-top-20 left-1/2 transform -translate-x-1/2 rotate-8 animate-float3">
               <Image
                 src="/03.png"
                 alt="Perfume"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Center-Right */}
-            <div className="absolute top-20 right-[20%] sm:right-1/4 transform -rotate-12 animate-float">
+            <div className="absolute gap-top-20 right-[20%] sm:right-1/4 transform -rotate-12 animate-float">
               <Image
                 src="/04.png"
                 alt="Shoe"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Right */}
-            <div className="absolute top-20 right-0 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
+            <div className="absolute gap-top-20 right-0 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
               <Image
                 src="/05.png"
                 alt="Bagpack"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
@@ -516,7 +516,7 @@ export default function Home() {
                 alt="Blue shoe"
                 width={256}
                 height={256}
-                className="w-20 h-20 object-contain"
+                className="w-20 h-20 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
@@ -527,73 +527,73 @@ export default function Home() {
                 alt="Burger"
                 width={256}
                 height={256}
-                className="w-20 h-20 object-contain"
+                className="w-20 h-20 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Row - Evenly spaced across the bottom */}
             {/* Bottom Left */}
-            <div className="absolute bottom-20 left-0 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
+            <div className="absolute gap-bottom-20 left-0 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
               <Image
                 src="/08.png"
                 alt="Red Bull"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Center-Left */}
-            <div className="absolute bottom-20 left-[20%] sm:left-1/4 transform rotate-6 animate-float">
+            <div className="absolute gap-bottom-20 left-[20%] sm:left-1/4 transform rotate-6 animate-float">
               <Image
                 src="/09.png"
                 alt="Hoodie"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Center */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
+            <div className="absolute gap-bottom-20 left-1/2 transform -translate-x-1/2 -rotate-12 animate-float3">
               <Image
                 src="/10.png"
                 alt="Heels"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Center-Right */}
-            <div className="absolute bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
+            <div className="absolute gap-bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
               <Image
                 src="/11.png"
                 alt="Sneaker"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Right */}
-            <div className="absolute bottom-20 right-0 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
+            <div className="absolute gap-bottom-20 right-0 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
               <Image
                 src="/01.png"
                 alt="Cheeseburger"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
           </div>
 
           {/* Main Content */}
           <div className="relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-[#333] mb-4 leading-tight">
               Celebrate, No Matter the<br />Distance
             </h2>
-            <p className="text-base md:text-lg text-gray-700 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-[#666] max-w-2xl mx-auto">
               Near or far, you can still make someone smile or lift your own mood.
             </p>
           </div>
@@ -609,7 +609,7 @@ export default function Home() {
         >
           <div className="text-center">
             {/* Headline */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-3">
               Send real product stickers instantly
             </h2>
 
@@ -698,7 +698,7 @@ export default function Home() {
           }}
         >
           <div className="flex">
-            <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+            <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-[#333]">
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
@@ -708,7 +708,7 @@ export default function Home() {
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
             </div>
-            <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-gray-700">
+            <div className="animate-scroll whitespace-nowrap text-2xl md:text-3xl lg:text-4xl font-bold text-[#333]">
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
               <span className="mr-12">SEND SMILES • ANYWHERE</span>
@@ -728,7 +728,7 @@ export default function Home() {
           transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
           viewport={{ once: true }}
           data-sticky-sections
-          className="px-4 py-8 lg:min-h-[400vh] mt-16 lg:mt-0"
+          className="px-4 py-8 lg:min-h-[250vh] mt-16 lg:mt-0"
           onTouchStart={onTouchStart}
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
@@ -740,7 +740,7 @@ export default function Home() {
               <div className="lg:hidden space-y-12">
                 <div className="text-center">
                   <p className="text-sm text-gray-600 mb-2">How it works</p>
-                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-6 leading-tight">
                     Choose How You Gift
                   </h2>
                 </div>
@@ -829,7 +829,7 @@ export default function Home() {
                 <div className="flex-1 flex items-center">
                   <div className="space-y-3 px-4 text-left">
                     <p className="text-sm text-gray-600 mb-2">How it works</p>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-6 leading-tight">
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-6 leading-tight">
                       Choose How You Gift
                     </h2>
                     <div className="flex gap-4 mb-6 justify-start">
@@ -880,7 +880,7 @@ export default function Home() {
                       transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                       className="space-y-4"
                     >
-                      <h3 className="text-xl md:text-2xl font-bold text-black">
+                      <h3 className="text-xl md:text-2xl font-bold text-[#333]">
                         {activeStep === 0 && "Browse & Discover"}
                         {activeStep === 1 && "Send & Share"}
                         {activeStep === 2 && "Redeem & Enjoy"}
@@ -938,10 +938,10 @@ export default function Home() {
               </div>
 
               {/* Title and Description */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 leading-tight text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-4 leading-tight text-center">
                 Deal of the Day
               </h2>
-              <p className="text-base md:text-lg text-black leading-relaxed text-center">
+              <p className="text-base md:text-lg text-[#666] leading-relaxed text-center">
                 A new surprise every day! Check out today&apos;s top pick fun, fresh, and perfect whether you&apos;re sending it or adding it to your own collection.
               </p>
             </div>
@@ -949,7 +949,7 @@ export default function Home() {
             {/* Event Calendar Card */}
             <div className="bg-gray-50 rounded-2xl p-8">
               {/* Image */}
-              <div className="mb-6">
+              <div className="mb-6 sm:mb-9 lg:mb-11">
                 <Image
                   src="/b3.png"
                   alt="Event Calendar"
@@ -960,10 +960,10 @@ export default function Home() {
               </div>
 
               {/* Title and Description */}
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black mb-4 leading-tight text-center">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#333] mb-4 leading-tight text-center">
                 Event Calendar
               </h2>
-              <p className="text-base md:text-lg text-black leading-relaxed text-center">
+              <p className="text-base md:text-lg text-[#666] leading-relaxed text-center">
                 Never miss a reason to celebrate. Keep track of all the big (and small) days that matter and stay ready to shop, share, or connect with perfect timing.
               </p>
             </div>
@@ -992,113 +992,113 @@ export default function Home() {
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-50">
             {/* Top Row - Mobile: 4 icons, Large: 5 icons */}
             {/* Top Left */}
-            <div className="absolute top-20 left-0 sm:left-16 lg:left-24 transform rotate-12 animate-float">
+            <div className="absolute gap-top-20 left-0 sm:left-16 lg:left-24 transform rotate-12 animate-float">
               <Image
                 src="/01.png"
                 alt="Cheeseburger"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Center-Left */}
-            <div className="absolute top-20 left-[20%] sm:left-1/4 transform -rotate-6 animate-float2">
+            <div className="absolute gap-top-20 left-[20%] sm:left-1/4 transform -rotate-6 animate-float2">
               <Image
                 src="/02.png"
                 alt="Shake"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Center */}
-            <div className="absolute top-20 left-1/2 transform -translate-x-1/2 rotate-8 animate-float3">
+            <div className="absolute gap-top-20 left-1/2 transform -translate-x-1/2 rotate-8 animate-float3">
               <Image
                 src="/03.png"
                 alt="Perfume"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Center-Right */}
-            <div className="absolute top-20 right-[20%] sm:right-1/4 transform -rotate-12 animate-float">
+            <div className="absolute gap-top-20 right-[20%] sm:right-1/4 transform -rotate-12 animate-float">
               <Image
                 src="/04.png"
                 alt="Shoe"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Top Right */}
-            <div className="absolute top-20 right-0 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
+            <div className="absolute gap-top-20 right-0 sm:right-16 lg:right-24 transform rotate-6 animate-float2">
               <Image
                 src="/05.png"
                 alt="Bagpack"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Row - Mobile: 4 icons, Large: 5 icons */}
             {/* Bottom Left */}
-            <div className="absolute bottom-20 left-0 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
+            <div className="absolute gap-bottom-20 left-0 sm:left-16 lg:left-24 transform -rotate-8 animate-float2">
               <Image
                 src="/10.png"
                 alt="Heels"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Center-Left */}
-            <div className="absolute bottom-20 left-[20%] sm:left-1/4 transform rotate-6 animate-float">
+            <div className="absolute gap-bottom-20 left-[20%] sm:left-1/4 transform rotate-6 animate-float">
               <Image
                 src="/11.png"
                 alt="Sneaker"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-28 lg:h-28 object-contain"
+                className="w-16 h-16 sm:w-28 sm:h-28 lg:w-34 lg:h-34 object-contain"
               />
             </div>
 
             {/* Bottom Center */}
-            <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 rotate-12 animate-float3">
+            <div className="absolute gap-bottom-20 left-1/2 transform -translate-x-1/2 rotate-12 animate-float3">
               <Image
                 src="/09.png"
                 alt="Hoodie"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-22 lg:h-22 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
 
             {/* Bottom Center-Right */}
-            <div className="absolute bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
+            <div className="absolute gap-bottom-20 right-[20%] sm:right-1/4 transform rotate-8 animate-float">
               <Image
                 src="/06.png"
                 alt="Blue shoe"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain scale-x-[-1]"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain scale-x-[-1]"
               />
             </div>
 
             {/* Bottom Right */}
-            <div className="absolute bottom-20 right-0 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
+            <div className="absolute gap-bottom-20 right-0 sm:right-16 lg:right-24 transform -rotate-6 animate-float2">
               <Image
                 src="/03.png"
                 alt="Perfume"
                 width={256}
                 height={256}
-                className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain"
+                className="w-16 h-16 sm:w-24 sm:h-24 lg:w-30 lg:h-30 object-contain"
               />
             </div>
           </div>
@@ -1145,27 +1145,27 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               {/* Left Content */}
               <div className="space-y-8 flex flex-col items-center md:items-start text-center md:text-left">
-                <h1 className="text-4xl md:text-5xl font-bold text-black leading-tight">
+                <h1 className="text-4xl md:text-5xl font-bold text-[#333] leading-tight">
                   Make Every Moment<br />Personalized
                 </h1>
 
                 {/* Bullet Points */}
                 <div className="space-y-4">
                   <div className="md:flex md:items-start md:gap-3">
-                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                    <p className="text-base md:text-lg text-black leading-7">Products that feel just right.</p>
+                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-[#666] leading-7">•</span>
+                    <p className="text-base md:text-lg text-[#666] leading-7">Products that feel just right.</p>
                   </div>
 
                   <div className="md:flex md:items-start md:gap-3">
-                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                    <p className="text-base md:text-lg text-black leading-7">
+                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-[#666] leading-7">•</span>
+                    <p className="text-base md:text-lg text-[#666] leading-7">
                       With Heyjinie, every gesture becomes meaningful whether it&apos;s a thoughtful message for someone else or a vibe that fits your own mood.
                     </p>
                   </div>
 
                   <div className="md:flex md:items-start md:gap-3">
-                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-gray-700 leading-7">•</span>
-                    <p className="text-base md:text-lg text-black leading-7">Personalized templates and designs make every interaction special.</p>
+                    <span className="hidden md:inline text-base md:text-lg flex-shrink-0 text-[#666] leading-7">•</span>
+                    <p className="text-base md:text-lg text-[#666] leading-7">Personalized templates and designs make every interaction special.</p>
                   </div>
                 </div>
 
@@ -1173,11 +1173,11 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                   <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
                     <FaApple className="text-black w-6 h-6" />
-                    <span className="label text-gray-700 font-medium">App Store</span>
+                    <span className="label text-[#666] font-medium">App Store</span>
                   </a>
                   <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-6 py-3 flex items-center gap-3">
                     <Image src="/googleplay.png" alt="Google Play" width={20} height={20} className="w-5 h-5 object-contain" />
-                    <span className="label text-gray-700 font-medium">Google Play</span>
+                    <span className="label text-[#666] font-medium">Google Play</span>
                   </a>
                 </div>
               </div>
@@ -1203,7 +1203,7 @@ export default function Home() {
         <footer className="px-4 py-16 mt-20 bg-[#88C1FD] rounded-t-2xl">
           {/* Stay Connected Section */}
           <div className="bg-white rounded-2xl p-8 mb-8 text-center md:text-left">
-            <h2 className="text-xl md:text-2xl font-bold text-black mb-6">Stay Connected</h2>
+            <h2 className="text-xl md:text-2xl font-bold text-[#333] mb-6">Stay Connected</h2>
             <div className="flex flex-col md:flex-row items-center md:items-center justify-center md:justify-between gap-6">
               {/* Logo and Contact */}
               <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 max-h-14">
@@ -1223,11 +1223,11 @@ export default function Home() {
               <div className="flex items-center gap-3">
                 <a href="https://apps.apple.com/us/app/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
                   <FaApple className="text-black w-5 h-5" />
-                  <span className="label text-gray-700 text-sm font-medium">App Store</span>
+                  <span className="label text-[#666] text-sm font-medium">App Store</span>
                 </a>
                 <a href="https://play.google.com/store/apps/heyjinie" target="_blank" rel="noopener noreferrer" className="btn-liquid bg-white border border-gray-300 rounded-full px-4 py-2 flex items-center gap-2">
                   <Image src="/googleplay.png" alt="Google Play" width={16} height={16} className="w-4 h-4 object-contain" />
-                  <span className="label text-gray-700 text-sm font-medium">Google Play</span>
+                  <span className="label text-[#666] text-sm font-medium">Google Play</span>
                 </a>
               </div>
             </div>
